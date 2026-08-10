@@ -52,9 +52,9 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
   return (
     <div className="pt-24 pb-20 bg-slate-50 min-h-screen">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-red-700 via-red-600 to-red-800 text-white py-12 px-4 sm:px-6 lg:px-8 shadow-md relative overflow-hidden mb-10">
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-12 px-4 sm:px-6 lg:px-8 shadow-md relative overflow-hidden mb-10">
         <div className="max-w-6xl mx-auto text-center space-y-3 relative z-10">
-          <span className="inline-block bg-white/10 px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold uppercase tracking-widest text-red-200">
+          <span className="inline-block bg-white/10 px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold uppercase tracking-widest text-blue-200">
             {t.pkg_tag}
           </span>
           <h1 className="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight text-white">
@@ -71,7 +71,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
         {/* CATEGORY SELECTOR TABS BAR */}
         <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200 shadow-md max-w-3xl mx-auto text-center space-y-3">
           <div>
-            <span className="text-[10px] font-black uppercase tracking-wider text-red-600 block">
+            <span className="text-[10px] font-black uppercase tracking-wider text-blue-600 block">
               {t.pkg_filter_heading}
             </span>
           </div>
@@ -81,7 +81,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               onClick={() => setActiveCategory('all')}
               className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'all'
-                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/25 scale-[1.02]'
                   : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -93,11 +93,11 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               onClick={() => setActiveCategory('menginap')}
               className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'menginap'
-                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/25 scale-[1.02]'
                   : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              <MapPin className="w-4 h-4 shrink-0 text-red-500" />
+              <MapPin className="w-4 h-4 shrink-0 text-blue-500" />
               <span>{t.pkg_filter_domestik}</span>
             </button>
 
@@ -105,11 +105,11 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               onClick={() => setActiveCategory('pp')}
               className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'pp'
-                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/25 scale-[1.02]'
                   : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              <Bus className="w-4 h-4 shrink-0 text-red-500" />
+              <Bus className="w-4 h-4 shrink-0 text-blue-500" />
               <span>{t.pkg_filter_internasional}</span>
             </button>
           </div>
@@ -134,12 +134,12 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                   
                   {/* Badge */}
-                  <div className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-md shadow-sm">
+                  <div className="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-md shadow-sm">
                     {pkg.badge}
                   </div>
 
                   <div className="absolute top-3 right-3 bg-slate-900/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-md border border-slate-700 flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-red-400" />
+                    <Calendar className="w-3 h-3 text-sky-400" />
                     <span>{pkg.duration}</span>
                   </div>
 
@@ -166,7 +166,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between">
                     <div>
                       <span className="text-[10px] font-bold text-slate-400 uppercase block">{t.pkg_starting_from}</span>
-                      <span className="font-display font-black text-base text-red-600">
+                      <span className="font-display font-black text-base text-blue-600">
                         {pkg.minPrice} <span className="text-[10px] font-normal text-slate-500">{t.pkg_per_person}</span>
                       </span>
                     </div>
@@ -181,7 +181,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               <div className="p-5 pt-0">
                 <button
                   onClick={() => handleOpenModal(pkg)}
-                  className="w-full bg-slate-900 hover:bg-red-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>{t.pkg_detail_btn}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -217,7 +217,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               <div className="relative bg-slate-900 text-white p-4 sm:p-5 shrink-0 border-b border-slate-800 z-20">
                 <button
                   onClick={handleCloseModal}
-                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
+                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all flex items-center justify-center shadow-xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
                   title="Tutup Modal (Kembali)"
                   id="close-tour-modal"
                 >
@@ -226,7 +226,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
                 <div className="space-y-1.5 pr-14">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
+                    <span className="bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
                       {t.pkg_modal_duration}: {selectedPackage.duration}
                     </span>
                     <span className="text-[11px] font-semibold text-slate-300">
@@ -257,7 +257,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                           onClick={() => setSelectedTier(tier)}
                           className={`p-3 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
                             isSelected
-                              ? 'border-red-600 bg-red-50/50 shadow-xs ring-1 ring-red-600'
+                              ? 'border-blue-600 bg-blue-50/50 shadow-xs ring-1 ring-blue-600'
                               : 'border-slate-200 bg-white hover:border-slate-300'
                           }`}
                         >
@@ -272,7 +272,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                                 </span>
                               </div>
                               {isSelected && (
-                                <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded">
+                                <span className="text-[9px] font-bold text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded">
                                   {t.pkg_modal_selected}
                                 </span>
                               )}
@@ -290,7 +290,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
                           <div className="mt-2.5 pt-1.5 border-t border-slate-200/80 flex items-center justify-between">
                             <span className="text-[9px] font-bold text-slate-500 uppercase">{t.pkg_starting_from}</span>
-                            <span className="font-display font-black text-xs sm:text-sm text-red-600">
+                            <span className="font-display font-black text-xs sm:text-sm text-blue-600">
                               {tier.pricePerPerson} <span className="text-[9px] font-normal text-slate-500">{t.pkg_per_person}</span>
                             </span>
                           </div>
@@ -308,7 +308,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   <ul className="space-y-1 text-slate-700 text-[11px] font-medium">
                     {selectedPackage.highlights.map((spot, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
                         <span>{spot}</span>
                       </li>
                     ))}
@@ -355,13 +355,13 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                 <div className="min-w-0">
                   <span className="text-[9px] text-slate-400 block font-medium uppercase tracking-wider">{t.pkg_modal_selected}:</span>
                   <span className="font-display font-bold text-xs text-white truncate block">
-                    {selectedTier.busType} — <span className="text-red-400">{selectedTier.pricePerPerson}{t.pkg_per_person}</span>
+                    {selectedTier.busType} — <span className="text-sky-400">{selectedTier.pricePerPerson}{t.pkg_per_person}</span>
                   </span>
                 </div>
 
                 <button
                   onClick={() => handleWhatsAppBooking(selectedPackage, selectedTier)}
-                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-xs uppercase py-2.5 px-4 sm:px-5 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer shrink-0 shadow-md"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-xs uppercase py-2.5 px-4 sm:px-5 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer shrink-0 shadow-md"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
                   <span>{t.pkg_modal_wa_btn}</span>

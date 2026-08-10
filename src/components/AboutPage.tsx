@@ -31,7 +31,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             PT. SIAGA WISATA JAYA
           </h1>
           <p className="font-sans text-xs font-bold text-slate-300 uppercase tracking-widest">
-            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer">BERANDA</span> / PROFIL &amp; TRACK RECORD
+            <span onClick={onNavigateHome} className="hover:text-blue-400 cursor-pointer">BERANDA</span> / PROFIL &amp; TRACK RECORD
           </p>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
         {/* SECTION 1: PROFIL PERUSAHAAN & SALAM PERSONA */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-5">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-md border border-red-200 inline-block">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md border border-blue-200 inline-block">
               PROFIL AGEN PERJALANAN WISATA
             </span>
             <h2 className="font-display font-black text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
@@ -56,7 +56,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             </p>
 
             <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white space-y-1 shadow-md border border-slate-700">
-              <span className="text-[10px] font-extrabold uppercase text-red-400 tracking-wider">SALAM PERSONA &amp; KONTAK</span>
+              <span className="text-[10px] font-extrabold uppercase text-sky-400 tracking-wider">SALAM PERSONA &amp; KONTAK</span>
               <p className="font-sans text-xs font-semibold text-slate-200">
                 "Salam dari Bpk. Tri Jaya Mulyana. Hubungi kami via WA 0812-8322-9616 untuk konsultasi itinerary &amp; penawaran terbaik."
               </p>
@@ -65,22 +65,22 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
 
           <div className="lg:col-span-5 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-red-600 text-white font-black flex items-center justify-center text-xl shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-black flex items-center justify-center text-xl shadow-md">
                 16+
               </div>
               <div>
-                <span className="font-extrabold text-xs text-red-600 uppercase block">REKAM JEJAK PANJANG</span>
+                <span className="font-extrabold text-xs text-blue-600 uppercase block">REKAM JEJAK PANJANG</span>
                 <span className="font-black text-lg text-slate-900 block">Tahun Pengalaman (2010 - 2026)</span>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div className="p-3.5 rounded-xl bg-white border border-slate-200 text-center">
-                <span className="font-black text-2xl text-red-600 block">1.300+</span>
+                <span className="font-black text-2xl text-blue-600 block">1.300+</span>
                 <span className="text-[11px] font-bold text-slate-600 block">Pax Transaksi (Jan-Jul 2025)</span>
               </div>
               <div className="p-3.5 rounded-xl bg-white border border-slate-200 text-center">
-                <span className="font-black text-2xl text-red-600 block">90%</span>
+                <span className="font-black text-2xl text-blue-600 block">90%</span>
                 <span className="text-[11px] font-bold text-slate-600 block">Wisatawan Domestik</span>
               </div>
             </div>
@@ -93,14 +93,14 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             <h2 className="font-display font-black text-3xl text-slate-900 uppercase">
               Visi &amp; Misi Perusahaan
             </h2>
-            <div className="w-16 h-1 bg-red-600 mx-auto rounded-full" />
+            <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Visi Card */}
             <div className="p-7 rounded-3xl bg-slate-900 text-white space-y-4 shadow-xl border border-slate-800">
               <div className="flex items-center gap-3">
-                <Award className="w-8 h-8 text-red-500" />
+                <Award className="w-8 h-8 text-sky-400" />
                 <h3 className="font-display font-black text-xl text-white uppercase">Visi Perusahaan</h3>
               </div>
               <p className="font-sans text-xs sm:text-sm text-slate-200 leading-relaxed italic font-medium">
@@ -111,7 +111,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             {/* Misi Card */}
             <div className="p-7 rounded-3xl bg-white border border-slate-200 space-y-4 shadow-md">
               <div className="flex items-center gap-3">
-                <ShieldCheck className="w-8 h-8 text-red-600" />
+                <ShieldCheck className="w-8 h-8 text-blue-600" />
                 <h3 className="font-display font-black text-xl text-slate-900 uppercase">Misi Perusahaan</h3>
               </div>
               <p className="font-sans text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
@@ -129,9 +129,9 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Tour Services */}
-            <div className="p-6 rounded-2xl bg-red-50/60 border border-red-200 space-y-3">
-              <h3 className="font-display font-bold text-lg text-red-950 flex items-center gap-2">
-                <Globe className="w-5 h-5 text-red-600" />
+            <div className="p-6 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-3">
+              <h3 className="font-display font-bold text-lg text-blue-950 flex items-center gap-2">
+                <Globe className="w-5 h-5 text-blue-600" />
                 Layanan Paket Tour Wisata
               </h3>
               <ul className="list-disc pl-5 text-xs sm:text-sm text-slate-700 space-y-1.5 font-medium">
@@ -145,7 +145,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             {/* Vehicle Rental */}
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
               <h3 className="font-display font-bold text-lg text-slate-900 flex items-center gap-2">
-                <Bus className="w-5 h-5 text-red-600" />
+                <Bus className="w-5 h-5 text-blue-600" />
                 Layanan Sewa Kendaraan &amp; Bus
               </h3>
               <ul className="list-disc pl-5 text-xs sm:text-sm text-slate-700 space-y-1.5 font-medium">
@@ -160,7 +160,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
         {/* SECTION 4: SEGMENTASI PASAR & SOCIAL PROOF (JANUARI - JULI 2025) */}
         <section className="space-y-8 border-t border-slate-200 pt-12">
           <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-extrabold text-red-600 uppercase tracking-widest">
+            <span className="text-xs font-extrabold text-blue-600 uppercase tracking-widest">
               SOCIAL PROOF &amp; REKAM JEJAK TRANSAKSI
             </span>
             <h2 className="font-display font-black text-3xl text-slate-900 uppercase">
@@ -185,13 +185,13 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             </div>
 
             {/* Skala Sedang */}
-            <div className="p-6 rounded-2xl bg-red-50/80 border-2 border-red-500 shadow-md space-y-3 text-left relative">
-              <span className="absolute -top-3 right-4 bg-red-600 text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full shadow-xs">
+            <div className="p-6 rounded-2xl bg-blue-50/80 border-2 border-blue-500 shadow-md space-y-3 text-left relative">
+              <span className="absolute -top-3 right-4 bg-blue-600 text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full shadow-xs">
                 PORSI TERBESAR (75%)
               </span>
               <div className="flex items-center justify-between">
-                <span className="text-xs font-black uppercase tracking-wider text-red-600">SKALA SEDANG (75%)</span>
-                <span className="text-xs font-bold bg-red-200 text-red-950 px-2.5 py-0.5 rounded-full">75% Pax</span>
+                <span className="text-xs font-black uppercase tracking-wider text-blue-600">SKALA SEDANG (75%)</span>
+                <span className="text-xs font-bold bg-blue-200 text-blue-950 px-2.5 py-0.5 rounded-full">75% Pax</span>
               </div>
               <h3 className="font-display font-bold text-base text-slate-900">Open Trip, Outing, Arisan &amp; Pengajian</h3>
               <p className="text-xs text-slate-700 leading-relaxed font-medium">

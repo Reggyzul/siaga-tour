@@ -109,7 +109,7 @@ export default function App() {
 
   return (
     <div 
-      className="relative min-h-screen bg-white text-slate-900 selection:bg-red-600 selection:text-white font-sans" 
+      className="relative min-h-screen bg-white text-slate-900 selection:bg-blue-600 selection:text-white font-sans" 
       id="main-app-container"
     >
       

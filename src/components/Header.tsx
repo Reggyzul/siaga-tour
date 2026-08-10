@@ -65,7 +65,7 @@ export default function Header({
                 alt="Siaga Tour Logo" 
                 className="h-11 sm:h-13 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform shrink-0 drop-shadow-sm" 
               />
-              <span className="font-display font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">
+              <span className="font-display font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
                 Siaga Tour
               </span>
             </div>
@@ -75,8 +75,8 @@ export default function Header({
               
               <button
                 onClick={() => handleItemClick('home')}
-                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'home' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
+                className={`hover:text-blue-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'home' ? 'text-blue-600 font-extrabold border-b-2 border-blue-600' : ''
                 }`}
               >
                 {t.nav_home}
@@ -84,8 +84,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('about')}
-                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'about' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
+                className={`hover:text-blue-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'about' ? 'text-blue-600 font-extrabold border-b-2 border-blue-600' : ''
                 }`}
               >
                 {t.nav_about}
@@ -93,8 +93,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('package-tour')}
-                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'package-tour' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
+                className={`hover:text-blue-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'package-tour' ? 'text-blue-600 font-extrabold border-b-2 border-blue-600' : ''
                 }`}
               >
                 {t.nav_packages}
@@ -102,8 +102,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('cars')}
-                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'cars' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
+                className={`hover:text-blue-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'cars' ? 'text-blue-600 font-extrabold border-b-2 border-blue-600' : ''
                 }`}
               >
                 {t.nav_rentals}
@@ -111,8 +111,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('gallery')}
-                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'gallery' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
+                className={`hover:text-blue-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'gallery' ? 'text-blue-600 font-extrabold border-b-2 border-blue-600' : ''
                 }`}
               >
                 {t.nav_gallery}
@@ -129,7 +129,7 @@ export default function Header({
                   onClick={() => setLang('ID')}
                   className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer flex items-center gap-1 ${
                     lang === 'ID'
-                      ? 'bg-red-600 text-white shadow-xs font-extrabold'
+                      ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                   title="Bahasa Indonesia (Utama)"
@@ -140,7 +140,7 @@ export default function Header({
                   onClick={() => setLang('EN')}
                   className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer flex items-center gap-1 ${
                     lang === 'EN'
-                      ? 'bg-red-600 text-white shadow-xs font-extrabold'
+                      ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                   title="English Language"
@@ -151,7 +151,7 @@ export default function Header({
 
               <button
                 onClick={onBookingClick}
-                className="bg-[#dc2626] hover:bg-[#b91c1c] text-white font-display font-extrabold text-xs uppercase px-4 py-2.5 rounded-xl shadow-md shadow-red-600/20 transition-all cursor-pointer tracking-wider"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-display font-extrabold text-xs uppercase px-4 py-2.5 rounded-xl shadow-md shadow-blue-600/20 transition-all cursor-pointer tracking-wider"
                 id="header-book-tour-btn"
               >
                 {lang === 'EN' ? 'BOOK A TOUR' : 'PESAN TOUR'}
@@ -184,31 +184,31 @@ export default function Header({
             <div className="px-4 pt-3 pb-6 space-y-3">
               <button
                 onClick={() => handleItemClick('home')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-blue-600 py-2 border-b border-slate-100"
               >
                 {t.nav_home}
               </button>
               <button
                 onClick={() => handleItemClick('about')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-blue-600 py-2 border-b border-slate-100"
               >
                 {t.nav_about}
               </button>
               <button
                 onClick={() => handleItemClick('package-tour')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-blue-600 py-2 border-b border-slate-100"
               >
                 {t.nav_packages}
               </button>
               <button
                 onClick={() => handleItemClick('cars')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-blue-600 py-2 border-b border-slate-100"
               >
                 {t.nav_rentals}
               </button>
               <button
                 onClick={() => handleItemClick('gallery')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-blue-600 py-2"
               >
                 {t.nav_gallery}
               </button>
@@ -221,7 +221,7 @@ export default function Header({
                     onClick={() => setLang('ID')}
                     className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
                       lang === 'ID'
-                        ? 'bg-red-600 text-white font-extrabold'
+                        ? 'bg-blue-600 text-white font-extrabold'
                         : 'text-slate-600'
                     }`}
                   >
@@ -231,7 +231,7 @@ export default function Header({
                     onClick={() => setLang('EN')}
                     className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
                       lang === 'EN'
-                        ? 'bg-red-600 text-white font-extrabold'
+                        ? 'bg-blue-600 text-white font-extrabold'
                         : 'text-slate-600'
                     }`}
                   >
@@ -246,10 +246,11 @@ export default function Header({
                     setMobileMenuOpen(false);
                     onBookingClick();
                   }}
-                  className="w-full bg-[#dc2626] text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-blue-600 text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                 >
                   <span>{lang === 'EN' ? 'BOOK A TOUR' : 'PESAN TOUR'}</span>
                 </button>
+              </div>
               </div>
             </div>
           </motion.div>

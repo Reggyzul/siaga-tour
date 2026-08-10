@@ -28,8 +28,8 @@ export default function HomePreviews({
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-red-600 font-display font-extrabold text-xs tracking-wider uppercase">
-            <Bus className="w-4 h-4 text-red-600" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-display font-extrabold text-xs tracking-wider uppercase">
+            <Bus className="w-4 h-4 text-blue-600" />
             <span>KATALOG ARMADA UNGGULAN</span>
           </div>
 
@@ -37,7 +37,7 @@ export default function HomePreviews({
             Pilihan Armada Terawat &amp; Nyaman
           </h2>
 
-          <div className="w-16 h-1 bg-red-600 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
             Tersedia pilihan sewa Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus, Hiace Premio &amp; Commuter, Elf Long, hingga Toyota Avanza &amp; Innova.
@@ -63,11 +63,11 @@ export default function HomePreviews({
                     alt={car.name}
                     className="w-full h-auto object-contain max-h-[160px] drop-shadow-md group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-red-50 text-red-700 border border-red-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-xs">
+                  <div className="absolute top-3 left-3 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-xs">
                     {car.category}
                   </div>
                   <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-xs">
-                    <Users className="w-3.5 h-3.5 text-red-600" />
+                    <Users className="w-3.5 h-3.5 text-blue-600" />
                     <span>{car.seats} Kursi</span>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function HomePreviews({
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                   <div>
                     <span className="text-[10px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                    <span className="font-display font-black text-base text-red-600">
+                    <span className="font-display font-black text-base text-blue-600">
                       {car.priceDisplay}
                     </span>
                   </div>
@@ -94,7 +94,7 @@ export default function HomePreviews({
               <div className="pt-4">
                 <button
                   onClick={() => onSelectCar(car)}
-                  className="w-full bg-slate-900 hover:bg-red-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Pesan Armada</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -108,7 +108,7 @@ export default function HomePreviews({
         <div className="text-center pt-10">
           <button
             onClick={onNavigateToRentals}
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-display font-black text-xs sm:text-sm uppercase rounded-2xl shadow-lg shadow-red-600/30 transition-all hover:scale-105 cursor-pointer tracking-wider"
+            className="inline-flex items-center gap-2.5 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-display font-black text-xs sm:text-sm uppercase rounded-2xl shadow-lg shadow-blue-600/30 transition-all hover:scale-105 cursor-pointer tracking-wider"
           >
             <span>Selengkapnya</span>
             <ChevronDown className="w-4 h-4 animate-bounce" />
@@ -120,8 +120,8 @@ export default function HomePreviews({
       <section id="packages-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-6">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-red-600 font-display font-extrabold text-xs tracking-wider uppercase">
-            <Sparkles className="w-4 h-4 text-red-600" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-display font-extrabold text-xs tracking-wider uppercase">
+            <Sparkles className="w-4 h-4 text-blue-600" />
             <span>PAKET TOUR POPULER</span>
           </div>
 
@@ -129,7 +129,7 @@ export default function HomePreviews({
             Paket Perjalanan Wisata Pilihan
           </h2>
 
-          <div className="w-16 h-1 bg-red-600 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
             Layanan Study Tour, Outbound, Wisata Religi &amp; Gathering Rombongan dengan pilihan Paket Menginap maupun One Day Tour (PP).
@@ -158,12 +158,12 @@ export default function HomePreviews({
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                   
                   {/* Badge */}
-                  <div className="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-md shadow-sm">
+                  <div className="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-md shadow-sm">
                     {pkg.badge}
                   </div>
 
                   <div className="absolute top-3 right-3 bg-slate-900/90 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-md border border-slate-700 flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-red-400" />
+                    <Calendar className="w-3 h-3 text-sky-400" />
                     <span>{pkg.duration}</span>
                   </div>
 
@@ -190,7 +190,7 @@ export default function HomePreviews({
                   <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between">
                     <div>
                       <span className="text-[10px] font-bold text-slate-400 uppercase block">Mulai Dari</span>
-                      <span className="font-display font-black text-base text-red-600">
+                      <span className="font-display font-black text-base text-blue-600">
                         {pkg.minPrice} <span className="text-[10px] font-normal text-slate-500">/ org</span>
                       </span>
                     </div>
@@ -205,7 +205,7 @@ export default function HomePreviews({
               <div className="p-5 pt-0">
                 <button
                   onClick={onNavigateToPackages}
-                  className="w-full bg-slate-900 hover:bg-red-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Lihat Detail Paket</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -219,7 +219,7 @@ export default function HomePreviews({
         <div className="text-center pt-10">
           <button
             onClick={onNavigateToPackages}
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-display font-black text-xs sm:text-sm uppercase rounded-2xl shadow-lg shadow-red-600/30 transition-all hover:scale-105 cursor-pointer tracking-wider"
+            className="inline-flex items-center gap-2.5 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-display font-black text-xs sm:text-sm uppercase rounded-2xl shadow-lg shadow-blue-600/30 transition-all hover:scale-105 cursor-pointer tracking-wider"
           >
             <span>Selengkapnya</span>
             <ChevronDown className="w-4 h-4 animate-bounce" />

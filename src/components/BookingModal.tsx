@@ -110,16 +110,16 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
           <div className="lg:col-span-4 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 text-white p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden text-left">
             <div className="space-y-5 relative z-10">
               
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-[10px] font-extrabold uppercase tracking-widest">
-                <Sparkles className="w-3.5 h-3.5 text-red-400" />
-                <span>SIAGA TOUR & TRAVEL</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-sky-400 text-[10px] font-extrabold uppercase tracking-widest">
+                <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+                <span>SIAGA TOUR &amp; TRAVEL</span>
               </div>
 
               <div>
                 <h3 className="font-display font-black text-2xl text-white uppercase tracking-tight">
                   {currentSelectedCar.name}
                 </h3>
-                <p className="font-sans text-xs text-red-400 font-bold mt-0.5">
+                <p className="font-sans text-xs text-sky-400 font-bold mt-0.5">
                   {currentSelectedCar.category} ({currentSelectedCar.seats} Kursi)
                 </p>
               </div>
@@ -145,14 +145,14 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 </div>
                 <div className="flex justify-between py-1 border-b border-white/5">
                   <span className="text-slate-400">Pelayanan:</span>
-                  <span className="font-semibold text-red-400">Driver & Kru Ramah</span>
+                  <span className="font-semibold text-sky-400">Driver &amp; Kru Ramah</span>
                 </div>
               </div>
 
               {/* Motto Card */}
-              <div className="p-3.5 rounded-2xl bg-red-500/10 border border-red-500/30 text-left space-y-1">
-                <div className="flex items-center gap-1.5 text-red-400 font-extrabold text-[11px] uppercase tracking-wide">
-                  <Award className="w-4 h-4 shrink-0 text-red-400" />
+              <div className="p-3.5 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-left space-y-1">
+                <div className="flex items-center gap-1.5 text-sky-400 font-extrabold text-[11px] uppercase tracking-wide">
+                  <Award className="w-4 h-4 shrink-0 text-sky-400" />
                   <span>Wisata Hemat Travel Hebat</span>
                 </div>
                 <p className="font-sans text-[11px] text-slate-300 leading-relaxed font-medium">
@@ -175,7 +175,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-2xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all flex items-center justify-center shadow-2xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
               id="close-booking-modal"
               title="Tutup Modal (Kembali)"
             >
@@ -188,7 +188,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 {/* Header Title */}
                 <div>
                   <h4 className="font-display font-black text-xl sm:text-2xl text-[#0f172a] uppercase tracking-tight">
-                    Form Reservasi Tour & Armada
+                    Form Reservasi Tour &amp; Armada
                   </h4>
                   <p className="font-sans text-xs text-slate-500 leading-relaxed font-medium mt-1">
                     Lengkapi data pemesanan di bawah ini. Tim Siaga Tour akan segera merespons via WhatsApp.
@@ -197,8 +197,8 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                 {/* 1. PILIH KATEGORI TOUR & ARMADA */}
                 <div className="space-y-4 pt-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-red-600 block">
-                    1. PILIH KATEGORI TOUR & ARMADA
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-blue-600 block">
+                    1. PILIH KATEGORI TOUR &amp; ARMADA
                   </span>
 
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -207,12 +207,12 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       onClick={() => setRouteCategory('in_sumbar')}
                       className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                         routeCategory === 'in_sumbar'
-                          ? 'border-red-500 bg-red-50/70 text-red-950 font-bold shadow-xs'
+                          ? 'border-blue-600 bg-blue-50/70 text-blue-950 font-bold shadow-xs'
                           : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium'
                       }`}
                     >
-                      <span className="text-[11px] font-bold block">In Sumbar</span>
-                      <span className="text-[9px] text-slate-500 block">Bukittinggi, Painan</span>
+                      <span className="text-[11px] font-bold block">Domestic Tour</span>
+                      <span className="text-[9px] text-slate-500 block">Menginap / Multi-Day</span>
                     </button>
 
                     <button
@@ -220,12 +220,12 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       onClick={() => setRouteCategory('out_sumbar')}
                       className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                         routeCategory === 'out_sumbar'
-                          ? 'border-amber-500 bg-red-50/70 text-red-950 font-bold shadow-xs'
+                          ? 'border-blue-600 bg-blue-50/70 text-blue-950 font-bold shadow-xs'
                           : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium'
                       }`}
                     >
-                      <span className="text-[11px] font-bold block">Out Sumbar</span>
-                      <span className="text-[9px] text-slate-500 block">Bromo, Bali, Toba</span>
+                      <span className="text-[11px] font-bold block">One Day Tour</span>
+                      <span className="text-[9px] text-slate-500 block">Pulang Pergi (PP)</span>
                     </button>
 
                     <button
@@ -233,12 +233,12 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       onClick={() => setRouteCategory('internasional')}
                       className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                         routeCategory === 'internasional'
-                          ? 'border-blue-500 bg-blue-50/70 text-blue-950 font-bold shadow-xs'
+                          ? 'border-blue-600 bg-blue-50/70 text-blue-950 font-bold shadow-xs'
                           : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium'
                       }`}
                     >
-                      <span className="text-[11px] font-bold block">Internasional</span>
-                      <span className="text-[9px] text-slate-500 block">Singapura, Malaysia</span>
+                      <span className="text-[11px] font-bold block">Custom Tour</span>
+                      <span className="text-[9px] text-slate-500 block">Rombongan MICE</span>
                     </button>
 
                     <button
@@ -251,14 +251,14 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       }`}
                     >
                       <span className="text-[11px] font-bold block">Sewa Armada</span>
-                      <span className="text-[9px] text-slate-500 block">Bus / Hiace Only</span>
+                      <span className="text-[9px] text-slate-500 block">Bus / Mobil Only</span>
                     </button>
                   </div>
 
                   {/* Dropdown Pilihan Armada */}
                   <div className="space-y-1">
                     <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide">
-                      Pilihan Armada Bus / Mobil <span className="text-red-500">*</span>
+                      Pilihan Armada Bus / Mobil <span className="text-blue-600">*</span>
                     </label>
                     <select
                       value={selectedCarId}
@@ -267,7 +267,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         const newCar = CARS.find(c => c.id === e.target.value);
                         if (newCar && onCarChange) onCarChange(newCar);
                       }}
-                      className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans font-semibold text-slate-900 cursor-pointer bg-white"
+                      className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans font-semibold text-slate-900 cursor-pointer bg-white"
                     >
                       {CARS.map(c => (
                         <option key={c.id} value={c.id}>
@@ -280,14 +280,14 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                 {/* 2. DATA PEMESAN */}
                 <div className="space-y-3 pt-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-red-600 block">
-                    2. DATA PEMESAN & KONTAK
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-blue-600 block">
+                    2. DATA PEMESAN &amp; KONTAK
                   </span>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide">
-                        Nama Lengkap / Instansi <span className="text-red-500">*</span>
+                        Nama Lengkap / Instansi <span className="text-blue-600">*</span>
                       </label>
                       <div className="relative">
                         <User className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
@@ -296,15 +296,15 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                           required
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          placeholder="Contoh: Hj. Rahmawati / SMAN 1 Padang"
-                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                          placeholder="Contoh: Bpk. H. Ahmad / PT. Nusantara"
+                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-1">
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide">
-                        Nomor WhatsApp Active <span className="text-red-500">*</span>
+                        Nomor WhatsApp Active <span className="text-blue-600">*</span>
                       </label>
                       <div className="relative">
                         <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
@@ -313,8 +313,8 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                           required
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          placeholder="Contoh: 082178284459"
-                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                          placeholder="Contoh: 081283229616"
+                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                         />
                       </div>
                     </div>
@@ -323,21 +323,21 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                 {/* 3. JADWAL & LOKASI PENJEMPUTAN */}
                 <div className="space-y-3 pt-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-red-600 block">
-                    3. JADWAL & ALAMAT PENJEMPUTAN
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-blue-600 block">
+                    3. JADWAL &amp; ALAMAT PENJEMPUTAN
                   </span>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="space-y-1">
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide">
-                        Tanggal Berangkat <span className="text-red-500">*</span>
+                        Tanggal Berangkat <span className="text-blue-600">*</span>
                       </label>
                       <input
                         type="date"
                         required
                         value={departureDate}
                         onChange={(e) => setDepartureDate(e.target.value)}
-                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                       />
                     </div>
 
@@ -350,7 +350,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         value={durationDays}
                         onChange={(e) => setDurationDays(e.target.value)}
                         placeholder="3 Hari 2 Malam / 1 Hari"
-                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                       />
                     </div>
 
@@ -363,7 +363,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         value={passengers}
                         onChange={(e) => setPassengers(e.target.value)}
                         placeholder="40 Orang / 1 Bus"
-                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                       />
                     </div>
                   </div>
@@ -372,15 +372,15 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wide">
-                        Alamat Lengkap Penjemputan <span className="text-red-500">*</span>
+                        Alamat Lengkap Penjemputan <span className="text-blue-600">*</span>
                       </label>
                       <textarea
                         required
                         rows={2}
                         value={pickupAddress}
                         onChange={(e) => setPickupAddress(e.target.value)}
-                        placeholder="Contoh: Jl. Andalas I No. 48 F Padang Timur..."
-                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                        placeholder="Contoh: Pejaten Barat, Pasar Minggu..."
+                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                       />
                     </div>
 
@@ -392,8 +392,8 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         rows={2}
                         value={destinations}
                         onChange={(e) => setDestinations(e.target.value)}
-                        placeholder="Contoh: Jam Gadang, Ngarai Sianok, Lembah Harau..."
-                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
+                        placeholder="Contoh: Bali, Bromo, Jogja..."
+                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                       />
                     </div>
                   </div>
@@ -408,7 +408,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-600 hover:to-amber-700 text-white font-display font-black text-sm px-8 py-3.5 rounded-full shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+                    className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-display font-black text-sm px-8 py-3.5 rounded-full shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2.5 cursor-pointer"
                     id="submit-booking-to-whatsapp"
                   >
                     <Send className="w-4 h-4" />
@@ -435,7 +435,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 </p>
                 <button
                   onClick={onClose}
-                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-sm px-7 py-3 rounded-full shadow-md transition-colors cursor-pointer mt-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-sm px-7 py-3 rounded-full shadow-md transition-colors cursor-pointer mt-2"
                 >
                   Tutup Form
                 </button>

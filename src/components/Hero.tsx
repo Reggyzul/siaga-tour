@@ -66,7 +66,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-red-300 tracking-wider uppercase drop-shadow-sm"
+            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-sky-300 tracking-wider uppercase drop-shadow-sm"
           >
             <span>{t.hero_motto}</span>
           </motion.div>
@@ -89,7 +89,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                 {t.search_dest_cat}
               </label>
               <div className="flex items-center gap-2 mt-1 relative">
-                <MapPin className="w-4 h-4 text-[#dc2626] shrink-0" />
+                <MapPin className="w-4 h-4 text-blue-600 shrink-0" />
                 <select
                   value={destinationInput}
                   onChange={(e) => setDestinationInput(e.target.value)}
@@ -119,7 +119,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                 {t.search_travel_date}
               </label>
               <div className="flex items-center gap-2 mt-1">
-                <Calendar className="w-4 h-4 text-red-500 shrink-0" />
+                <Calendar className="w-4 h-4 text-blue-600 shrink-0" />
                 <input
                   type="text"
                   value={travelDateInput}
@@ -134,10 +134,12 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             <div className="md:col-span-3">
               <button
                 type="submit"
-                className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-display font-extrabold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer tracking-wider"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-display font-extrabold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer tracking-wider"
               >
                 <Search className="w-4 h-4" />
                 <span>{t.search_btn}</span>
+              </button>
+            </div>
               </button>
             </div>
 

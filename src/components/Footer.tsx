@@ -13,22 +13,24 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
   return (
     <footer id="footer-contact" className="bg-slate-950 text-white pt-16 pb-12 overflow-hidden relative border-t border-slate-800">
       
+    <footer id="footer-contact" className="bg-slate-950 text-white pt-16 pb-12 overflow-hidden relative border-t border-slate-800">
+      
       {/* Background Decorative Accent */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Callout Box */}
         <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 rounded-3xl p-8 border border-slate-700/80 shadow-2xl mb-14 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           <div className="md:col-span-8 text-left space-y-2">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-red-400 bg-red-950/80 px-3 py-1 rounded-full border border-red-800/50">
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-sky-400 bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/50">
               KONSULTASI TOUR 24 JAM
             </span>
             <h3 className="font-display font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">
               Rencanakan Perjalanan Bersama Pak Tri Jaya Mulyana
             </h3>
             <p className="font-sans text-xs text-slate-300 font-medium max-w-xl leading-relaxed">
-              Solusi paket wisata Study Tour, Wisata Religi, Outbound, Gathering & Sewa Bus Pariwisata Terbaik & Amanah.
+              Solusi paket wisata Study Tour, Wisata Religi, Outbound, Gathering &amp; Sewa Bus Pariwisata Terbaik &amp; Amanah.
             </p>
           </div>
           <div className="md:col-span-4 flex justify-start md:justify-end">
@@ -36,7 +38,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
               href="https://api.whatsapp.com/send?phone=6281283229616&text=Halo%20Pak%20Tri%20Jaya%20Mulyana%20(PT.%20SIAGA%20WISATA%20JAYA),%20saya%20ingin%20konsultasi%20paket%20tour%20dan%20sewa%20armada"
               target="_blank"
               rel="noreferrer"
-              className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 hover:from-red-600 hover:to-amber-700 text-white font-sans font-bold text-xs uppercase px-7 py-4 rounded-full shadow-lg shadow-red-600/25 transition-all flex items-center gap-2.5 cursor-pointer"
+              className="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white font-sans font-bold text-xs uppercase px-7 py-4 rounded-full shadow-lg shadow-blue-600/25 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               <span>WhatsApp: 0812-8322-9616</span>
@@ -59,33 +61,33 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                 <span className="font-display font-black text-2xl sm:text-3xl tracking-tight text-white uppercase block">
                   Siaga Tour
                 </span>
-                <span className="font-sans text-[10px] sm:text-[11px] font-extrabold text-red-400 tracking-wider block mt-0.5 uppercase">
+                <span className="font-sans text-[10px] sm:text-[11px] font-extrabold text-sky-400 tracking-wider block mt-0.5 uppercase">
                   PT. SIAGA WISATA JAYA — BERPENGALAMAN SEJAK 2010
                 </span>
               </div>
             </div>
 
             <p className="font-sans text-xs text-slate-400 leading-relaxed max-w-md font-medium">
-              Agen Perjalanan Wisata Terbaik, Amanah & mengedepankan Pelayanan Prima di Indonesia. Berpengalaman sejak tahun 2010 melayani 1.300+ pax wisatawan domestik (90%) dan WNA (10%).
+              Agen Perjalanan Wisata Terbaik, Amanah &amp; mengedepankan Pelayanan Prima di Indonesia. Berpengalaman sejak tahun 2010 melayani 1.300+ pax wisatawan domestik (90%) dan WNA (10%).
             </p>
 
             <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1">
-              <span className="text-[10px] font-extrabold text-red-400 uppercase tracking-wider block">PERSONA & SALAM</span>
+              <span className="text-[10px] font-extrabold text-sky-400 uppercase tracking-wider block">PERSONA &amp; SALAM</span>
               <p className="font-sans text-xs text-slate-300 italic">
-                "Salam hangat dari Tri Jaya Mulyana — Mengedepankan Pelayanan Prima & Perjalanan Wisata Amanah."
+                "Salam hangat dari Tri Jaya Mulyana — Mengedepankan Pelayanan Prima &amp; Perjalanan Wisata Amanah."
               </p>
             </div>
           </div>
 
           {/* Column 2: Official Address & Contact */}
           <div className="md:col-span-4 space-y-4">
-            <h4 className="font-display font-black text-sm uppercase text-red-500 tracking-wider">
-              Lokasi & Kontak Resmi
+            <h4 className="font-display font-black text-sm uppercase text-sky-400 tracking-wider">
+              Lokasi &amp; Kontak Resmi
             </h4>
 
             <div className="space-y-3 text-xs text-slate-300 font-medium">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-white block">Alamat Perusahaan:</span>
                   <span className="text-slate-400 leading-relaxed block">
@@ -95,17 +97,17 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-white block">WhatsApp / Telepon:</span>
-                  <a href="tel:081283229616" className="text-slate-300 hover:text-red-400 font-bold block">
+                  <a href="tel:081283229616" className="text-slate-300 hover:text-sky-400 font-bold block">
                     0812-8322-9616 (Tri Jaya Mulyana)
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-white block">Jam Operational:</span>
                   <span className="text-slate-400 block">Layanan Konsultasi 24 Jam Non-stop</span>
@@ -116,7 +118,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
 
           {/* Column 3: Quick Links & Services */}
           <div className="md:col-span-3 space-y-4">
-            <h4 className="font-display font-black text-sm uppercase text-red-500 tracking-wider">
+            <h4 className="font-display font-black text-sm uppercase text-sky-400 tracking-wider">
               Layanan Utama
             </h4>
 
