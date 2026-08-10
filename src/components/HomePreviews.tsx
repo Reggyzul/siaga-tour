@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { CARS } from '../data/cars';
 import { TOUR_PACKAGES } from '../data/packages';
 import { Car } from '../types';
-import { Users, Calendar, ArrowRight, ChevronDown, Sparkles, MapPin, Bus, ShieldCheck } from 'lucide-react';
+import { Users, Calendar, ArrowRight, ChevronDown, Sparkles, Bus, Layers, ShieldCheck } from 'lucide-react';
+import FleetCategoryModal, { FLEET_GROUPS, FleetCategoryGroup } from './FleetCategoryModal';
 
 interface HomePreviewsProps {
   onNavigateToRentals: () => void;
@@ -18,85 +18,107 @@ export default function HomePreviews({
   onSelectCar,
   lang
 }: HomePreviewsProps) {
-  const displayedCars = CARS.slice(0, 6);
+  const [selectedGroup, setSelectedGroup] = useState<FleetCategoryGroup | null>(null);
   const displayedPackages = TOUR_PACKAGES.slice(0, 6);
 
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. PREVIEW 6 ARMADA KENDARAAN (SEWA ARMADA) */}
+      {/* 1. KATALOG ARMADA DENGAN 3 KARTU KATEGORI UTAMA (BUS, HIACE, ELF/MINIBUS) */}
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-display font-extrabold text-xs tracking-wider uppercase">
             <Bus className="w-4 h-4 text-blue-600" />
-            <span>KATALOG ARMADA UNGGULAN</span>
+            <span>KATALOG KATEGORI ARMADA UNGGULAN</span>
           </div>
 
           <h2 className="font-display font-black text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
-            Pilihan Armada Terawat &amp; Nyaman
+            Pilihan Armada Berdasarkan Jenis &amp; Kapasitas
           </h2>
 
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Tersedia pilihan sewa Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus, Hiace Premio &amp; Commuter, Elf Long, hingga Toyota Avanza &amp; Innova.
+            Klik kartu kategori di bawah ini untuk melihat beragam pilihan tipe armada **Semua Bus**, **Semua Hiace**, serta **Semua Elf &amp; Minibus MPV**.
           </p>
         </div>
 
-        {/* 6 Cars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {displayedCars.map((car, index) => (
+        {/* 3 Main Category Group Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          {FLEET_GROUPS.map((group, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
-              key={car.id}
-              className="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              key={group.id}
+              onClick={() => setSelectedGroup(group)}
+              className="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer relative"
             >
-              <div className="space-y-4">
-                {/* Image Box */}
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
+              <div>
+                {/* Photo Header Banner */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                   <img
-                    src={car.image}
-                    alt={car.name}
-                    className="w-full h-auto object-contain max-h-[160px] drop-shadow-md group-hover:scale-105 transition-transform duration-500"
+                    src={group.image}
+                    alt={group.title}
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 opacity-90"
                   />
-                  <div className="absolute top-3 left-3 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-xs">
-                    {car.category}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+                  
+                  {/* Badge */}
+                  <div className="absolute top-3.5 left-3.5 bg-blue-600 text-white font-display font-black text-[10px] uppercase px-3 py-1 rounded-full shadow-md tracking-wider">
+                    {group.badge}
                   </div>
-                  <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-xs">
+
+                  {/* Seat Range Badge */}
+                  <div className="absolute top-3.5 right-3.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-xs">
                     <Users className="w-3.5 h-3.5 text-blue-600" />
-                    <span>{car.seats} Kursi</span>
+                    <span>{group.seatsRange}</span>
+                  </div>
+
+                  {/* Title Overlay */}
+                  <div className="absolute bottom-3.5 left-3.5 right-3.5 space-y-1">
+                    <div className="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase text-sky-300 tracking-wider">
+                      <Layers className="w-3 h-3" />
+                      <span>{group.variantsCount} Tipe Armada Tersedia</span>
+                    </div>
+                    <h3 className="font-display font-black text-xl text-white tracking-tight uppercase leading-snug group-hover:text-sky-200 transition-colors">
+                      {group.title}
+                    </h3>
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="font-display font-black text-lg text-slate-900 tracking-tight">
-                    {car.name}
-                  </h3>
-                  <p className="text-xs text-slate-500 font-medium line-clamp-2 mt-1">
-                    {car.description}
+                {/* Card Content */}
+                <div className="p-5 space-y-3">
+                  <p className="font-sans text-xs text-slate-600 font-medium leading-relaxed">
+                    {group.subtitle}
                   </p>
-                </div>
 
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                    <span className="font-display font-black text-base text-blue-600">
-                      {car.priceDisplay}
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <div>
+                      <span className="text-[10px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                      <span className="font-display font-black text-sm text-blue-600">
+                        {group.priceDisplay}
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200">
+                      Lihat {group.variantsCount} Varian ➔
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4">
+              {/* Action Button */}
+              <div className="p-5 pt-0">
                 <button
-                  onClick={() => onSelectCar(car)}
-                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedGroup(group);
+                  }}
+                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Pesan Armada</span>
+                  <span>Lihat Pilihan {group.title}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -226,6 +248,13 @@ export default function HomePreviews({
           </button>
         </div>
       </section>
+
+      {/* Popup Category Modal for Grouped Fleet (Semua Bus, Semua Hiace, Semua Elf) */}
+      <FleetCategoryModal
+        group={selectedGroup}
+        onClose={() => setSelectedGroup(null)}
+        onSelectCar={onSelectCar}
+      />
 
     </div>
   );
