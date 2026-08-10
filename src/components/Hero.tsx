@@ -43,21 +43,20 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         <div className="h-20 sm:h-24" />
 
         {/* Hero Central Typography */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 py-6 text-center space-y-3 sm:space-y-4">
-          <motion.p
+        <div className="relative z-10 max-w-4xl mx-auto px-4 py-6 text-center space-y-3.5 sm:space-y-4">
+          <motion.div
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-white drop-shadow-lg"
-            style={{ fontFamily: "'Great Vibes', cursive, serif" }}
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-600/90 border border-blue-400/40 text-white font-display font-extrabold text-xs sm:text-sm md:text-base tracking-wider uppercase shadow-xl shadow-blue-950/50 backdrop-blur-md"
           >
-            {t.hero_explore}
-          </motion.p>
+            <span>{t.hero_explore}</span>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase leading-none drop-shadow-lg"
+            className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase leading-none drop-shadow-xl"
           >
             {t.hero_title_1}
           </motion.h1>
