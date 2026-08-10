@@ -57,15 +57,15 @@ export default function Header({
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-2.5 cursor-pointer group shrink-0"
+              className="flex items-center gap-3 cursor-pointer group shrink-0"
               id="header-logo"
             >
               <img 
                 src="/logo.png" 
                 alt="Siaga Tour Logo" 
-                className="w-10 h-10 object-contain group-hover:scale-105 transition-transform shrink-0" 
+                className="h-11 sm:h-13 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform shrink-0 drop-shadow-sm" 
               />
-              <span className="font-display font-black text-lg sm:text-xl text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">
+              <span className="font-display font-black text-xl sm:text-2xl md:text-3xl text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">
                 Siaga Tour
               </span>
             </div>
