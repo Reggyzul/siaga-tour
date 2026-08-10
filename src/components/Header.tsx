@@ -251,7 +251,6 @@ export default function Header({
                   <span>{lang === 'EN' ? 'BOOK A TOUR' : 'PESAN TOUR'}</span>
                 </button>
               </div>
-              </div>
             </div>
           </motion.div>
         )}

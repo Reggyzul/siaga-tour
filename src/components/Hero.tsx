@@ -140,8 +140,6 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                 <span>{t.search_btn}</span>
               </button>
             </div>
-              </button>
-            </div>
 
           </form>
         </div>

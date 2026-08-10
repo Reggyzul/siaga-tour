@@ -13,8 +13,6 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
   return (
     <footer id="footer-contact" className="bg-slate-950 text-white pt-16 pb-12 overflow-hidden relative border-t border-slate-800">
       
-    <footer id="footer-contact" className="bg-slate-950 text-white pt-16 pb-12 overflow-hidden relative border-t border-slate-800">
-      
       {/* Background Decorative Accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 

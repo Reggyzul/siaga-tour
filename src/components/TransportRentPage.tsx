@@ -170,8 +170,6 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   <span>Sewa Armada WA</span>
                 </button>
               </div>
-                </button>
-              </div>
 
             </motion.div>
           ))}
