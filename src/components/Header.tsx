@@ -92,15 +92,6 @@ export default function Header({
               </button>
 
               <button
-                onClick={() => handleItemClick('destinations')}
-                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'destinations' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
-                }`}
-              >
-                {t.nav_destinations}
-              </button>
-
-              <button
                 onClick={() => handleItemClick('package-tour')}
                 className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
                   activeSection === 'package-tour' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
@@ -202,12 +193,6 @@ export default function Header({
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 {t.nav_about}
-              </button>
-              <button
-                onClick={() => handleItemClick('destinations')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
-              >
-                {t.nav_destinations}
               </button>
               <button
                 onClick={() => handleItemClick('package-tour')}

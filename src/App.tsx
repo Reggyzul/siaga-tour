@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutPage from './components/AboutPage';
-import Services from './components/Services';
-import DestinationHighlightsPage from './components/DestinationHighlightsPage';
 import PackageTourPage from './components/PackageTourPage';
 import TransportRentPage from './components/TransportRentPage';
 import GalleryPage from './components/GalleryPage';
@@ -18,7 +16,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals' | 'destinations' | 'package-tour' | 'gallery'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals' | 'package-tour' | 'gallery'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -35,7 +33,7 @@ export default function App() {
       }
 
       if (currentPage === 'home') {
-        const sections = ['home', 'destinations', 'cars', 'footer-contact'];
+        const sections = ['home', 'cars', 'footer-contact'];
         const scrollPosition = window.scrollY + 250;
 
         for (const section of sections) {
@@ -65,10 +63,6 @@ export default function App() {
       setCurrentPage('rentals');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('rentals');
-    } else if (sectionId === 'destinations-page' || sectionId === 'destinations') {
-      setCurrentPage('destinations');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('destinations');
     } else if (sectionId === 'package-tour-page' || sectionId === 'package-tour' || sectionId === 'packages') {
       setCurrentPage('package-tour');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -132,14 +126,9 @@ export default function App() {
         {currentPage === 'home' ? (
           <>
             <Hero 
-              onExploreClick={() => handleNavClick('destinations')} 
+              onExploreClick={() => handleNavClick('package-tour')} 
               lang={lang} 
               onBookingClick={() => setSelectedCar(CARS[0])} 
-            />
-
-            <Services 
-              lang={lang} 
-              onViewAllDestinations={() => handleNavClick('destinations')}
             />
 
             <BookingSteps lang={lang} />
@@ -148,8 +137,6 @@ export default function App() {
           </>
         ) : currentPage === 'about' ? (
           <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
-        ) : currentPage === 'destinations' ? (
-          <DestinationHighlightsPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : currentPage === 'package-tour' ? (
           <PackageTourPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : currentPage === 'gallery' ? (
