@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps) {
-  const [destinationInput, setDestinationInput] = useState('In Sumatera Barat');
+  const [destinationInput, setDestinationInput] = useState('Semua Paket Tour Wisata');
   const [travelDateInput, setTravelDateInput] = useState('');
 
   const t = TRANSLATIONS[lang];
@@ -95,8 +95,19 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                   onChange={(e) => setDestinationInput(e.target.value)}
                   className="w-full text-xs sm:text-sm font-black text-slate-900 focus:outline-none bg-transparent cursor-pointer appearance-none pr-4"
                 >
-                  <option value="Paket Menginap (Bali, Bromo, Jogja, Dieng, Semarang)">Paket Menginap (Bali, Bromo, Jogja, Dieng, Semarang)</option>
-                  <option value="Paket One Day Tour / PP (Lembang, Kuningan, Majalengka, Pangalengan, Anyer)">Paket One Day Tour / PP (Lembang, Kuningan, Majalengka, Pangalengan, Anyer)</option>
+                  <option value="Semua Paket Tour Wisata">Semua Paket Tour Wisata</option>
+                  <option value="Paket Tour Menginap (Bali, Bromo, Jogja, Dieng, Semarang)">Paket Tour Menginap (Bali, Bromo, Jogja, Dieng, Semarang)</option>
+                  <option value="Paket Tour One Day / PP (Lembang, Kuningan, Majalengka, Pangalengan, Anyer)">Paket Tour One Day / PP (Lembang, Kuningan, Majalengka, Pangalengan, Anyer)</option>
+                  <option value="Paket Wisata Bali (5D4N)">Paket Wisata Bali (5D4N)</option>
+                  <option value="Paket Wisata Bromo - Batu - Malang (4D)">Paket Wisata Bromo - Batu - Malang (4D)</option>
+                  <option value="Paket Wisata Jogja - Solo - Klaten (3D)">Paket Wisata Jogja - Solo - Klaten (3D)</option>
+                  <option value="Paket Wisata Semarang - Ungaran - Magelang (3D)">Paket Wisata Semarang - Ungaran - Magelang (3D)</option>
+                  <option value="Paket Wisata Dieng - Wonosobo (3D)">Paket Wisata Dieng - Wonosobo (3D)</option>
+                  <option value="Paket Wisata Lembang Bandung (PP)">Paket Wisata Lembang Bandung (PP)</option>
+                  <option value="Paket Wisata Kuningan (PP)">Paket Wisata Kuningan (PP)</option>
+                  <option value="Paket Wisata Majalengka (PP)">Paket Wisata Majalengka (PP)</option>
+                  <option value="Paket Wisata Pangalengan + Rafting (PP)">Paket Wisata Pangalengan + Rafting (PP)</option>
+                  <option value="Paket Wisata Pantai Anyer (PP)">Paket Wisata Pantai Anyer (PP)</option>
                 </select>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-0 pointer-events-none" />
               </div>

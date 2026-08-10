@@ -10,7 +10,7 @@ interface PackageTourPageProps {
 }
 
 export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPageProps) {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'domestik' | 'internasional'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'menginap' | 'pp'>('all');
   const [selectedPackage, setSelectedPackage] = useState<TourPackage | null>(null);
   const [selectedTier, setSelectedTier] = useState<TourTier | null>(null);
   const t = TRANSLATIONS[lang];
@@ -44,8 +44,8 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
   const filteredPackages = TOUR_PACKAGES.filter((pkg) => {
     if (activeCategory === 'all') return true;
-    if (activeCategory === 'domestik') return !pkg.duration.includes('Pulang Pergi');
-    if (activeCategory === 'internasional') return pkg.duration.includes('Pulang Pergi');
+    if (activeCategory === 'menginap') return !pkg.duration.includes('Pulang Pergi');
+    if (activeCategory === 'pp') return pkg.duration.includes('Pulang Pergi');
     return true;
   });
 
@@ -68,7 +68,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
-        {/* CATEGORY SELECTOR TABS BAR (Dalam Negeri vs Luar Negeri) */}
+        {/* CATEGORY SELECTOR TABS BAR */}
         <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200 shadow-md max-w-3xl mx-auto text-center space-y-3">
           <div>
             <span className="text-[10px] font-black uppercase tracking-wider text-red-600 block">
@@ -90,9 +90,9 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
             </button>
 
             <button
-              onClick={() => setActiveCategory('domestik')}
+              onClick={() => setActiveCategory('menginap')}
               className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                activeCategory === 'domestik'
+                activeCategory === 'menginap'
                   ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
                   : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
@@ -102,9 +102,9 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
             </button>
 
             <button
-              onClick={() => setActiveCategory('internasional')}
+              onClick={() => setActiveCategory('pp')}
               className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                activeCategory === 'internasional'
+                activeCategory === 'pp'
                   ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
                   : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
