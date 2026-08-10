@@ -30,7 +30,7 @@ export const TRANSLATIONS = {
     // Destinations Section & Page
     dest_tag: "KATALOG PAKET WISATA RESMI PERIODE 2026 / 2027",
     dest_title: "Destinasi Wisata Pilihan",
-    dest_desc: "Jelajahi keindahan alam, sejarah, religi, edukasi & petualangan Indonesia serta Mancanegara bersama Siaga Tour.",
+    dest_desc: "Jelajahi keindahan alam, sejarah, religi, edukasi & petualangan Indonesia bersama Siaga Tour.",
     dest_select_cat: "PILIH KATEGORI TUJUAN WISATA",
     dest_cat_subtitle: "Temukan Perjalanan Wisata Impian Anda",
     dest_cat_all: "Semua Paket",

@@ -57,20 +57,17 @@ export default function Header({
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-2 cursor-pointer group shrink-0"
+              className="flex items-center gap-2.5 cursor-pointer group shrink-0"
               id="header-logo"
             >
-              <div className="w-10 h-10 rounded-xl bg-red-600 text-white font-black flex items-center justify-center text-lg shadow-md group-hover:scale-105 transition-transform shrink-0">
-                ST
-              </div>
-              <div className="flex flex-col leading-snug">
-                <span className="font-bold text-xs sm:text-sm uppercase tracking-wide text-red-600 group-hover:text-red-700 transition-colors">
-                  PT. SIAGA WISATA JAYA
-                </span>
-                <span className="font-medium text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-500 group-hover:text-slate-700 transition-colors">
-                  Siaga Tour &amp; Travel
-                </span>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Siaga Tour Logo" 
+                className="w-10 h-10 object-contain group-hover:scale-105 transition-transform shrink-0" 
+              />
+              <span className="font-display font-black text-lg sm:text-xl text-slate-900 tracking-tight group-hover:text-red-600 transition-colors">
+                Siaga Tour
+              </span>
             </div>
 
             {/* 2. CENTER: DESKTOP NAV LINKS */}

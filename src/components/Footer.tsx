@@ -50,15 +50,17 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
           {/* Column 1: Company Profile & Logo */}
           <div className="md:col-span-5 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-red-600 text-white font-black flex items-center justify-center text-xl shadow-md shrink-0">
-                ST
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Siaga Tour Logo" 
+                className="w-12 h-12 object-contain shrink-0" 
+              />
               <div>
                 <span className="font-display font-black text-xl tracking-tight text-white uppercase block">
-                  PT. SIAGA <span className="text-red-500">WISATA JAYA</span>
+                  Siaga Tour
                 </span>
                 <span className="font-sans text-[10px] font-bold text-red-400 tracking-wider block mt-0.5">
-                  SIAGA TOUR — BERPENGALAMAN SEJAK 2010
+                  PT. SIAGA WISATA JAYA — BERPENGALAMAN SEJAK 2010
                 </span>
               </div>
             </div>

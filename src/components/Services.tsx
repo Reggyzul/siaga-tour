@@ -261,92 +261,6 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       rating: 4.8,
       reviews: 160,
       spots: ['Monumen Nasional (Monas) & Kota Tua', 'Taman Impian Jaya Ancol & Dufan', 'Taman Mini Indonesia Indah (TMII)', 'Grand Indonesia & Senayan City']
-    },
-
-    // 3. INTERNASIONAL (MANCANEGARA)
-    {
-      id: 'singapura',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Singapura',
-      subtitle: 'Southeast Asia Lion City',
-      badge: 'World Class City',
-      image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&q=80&w=800',
-      rating: 4.9,
-      reviews: 175,
-      spots: ['Marina Bay Sands & Merlion Park', 'Universal Studios Singapore (Sentosa)', 'Gardens by the Bay & Flower Dome', 'Orchard Road & Jewel Changi Airport']
-    },
-    {
-      id: 'malaysia',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Malaysia',
-      subtitle: 'Truly Asia Destination',
-      badge: 'Twin Towers & Genting',
-      image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&q=80&w=800',
-      rating: 4.8,
-      reviews: 155,
-      spots: ['Menara Kembar Petronas (KLCC)', 'Genting Highlands & Awana SkyWay Cable Car', 'Batu Caves Rainbow Stairs', 'Putrajaya & Dataran Merdeka']
-    },
-    {
-      id: 'thailand',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Thailand',
-      subtitle: 'Land of Smiles',
-      badge: 'Bangkok & Phuket',
-      image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&q=80&w=800',
-      rating: 4.9,
-      reviews: 145,
-      spots: ['Wat Arun & Grand Palace Bangkok', 'Chaophraya River Cruise', 'Asiatique The Riverfront', 'Phuket Island & James Bond Island']
-    },
-    {
-      id: 'korea',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Korea Selatan',
-      subtitle: 'K-Culture & Winter Wonderland',
-      badge: 'Seoul & Nami Island',
-      image: 'https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&q=80&w=800',
-      rating: 5.0,
-      reviews: 180,
-      spots: ['Nami Island (Winter Sonata)', 'Gyeongbokgung Palace & Hanbok Dress', 'N Seoul Tower (Namsan)', 'Myeongdong Shopping Street & Hongdae']
-    },
-    {
-      id: 'jepang',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Jepang',
-      subtitle: 'Land of the Rising Sun',
-      badge: 'Tokyo & Mt. Fuji',
-      image: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80&w=800',
-      rating: 5.0,
-      reviews: 210,
-      spots: ['Gunung Fuji & Danau Kawaguchiko', 'Asakusa Sensoji Temple & Skytree Tokyo', 'Shibuya Crossing & Harajuku', 'Universal Studios Japan (Osaka)']
-    },
-    {
-      id: 'eropa',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Eropa',
-      subtitle: 'European Dream Vacation',
-      badge: 'Menara Eiffel & Swiss Alps',
-      image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
-      rating: 5.0,
-      reviews: 195,
-      spots: ['Prancis (Menara Eiffel & Louvre)', 'Swiss (Mount Titlis & Interlaken)', 'Belanda (Keukenhof & Volendam)', 'Italia (Koloseum Roma & Venesia)']
-    },
-    {
-      id: 'amerika',
-      categoryKey: 'internasional',
-      categoryName: 'Internasional',
-      title: 'Amerika',
-      subtitle: 'USA & Canada Discovery',
-      badge: 'New York & Hollywood',
-      image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&q=80&w=800',
-      rating: 5.0,
-      reviews: 185,
-      spots: ['New York (Times Square & Patung Liberty)', 'Los Angeles (Hollywood & Universal Studios)', 'Las Vegas & Grand Canyon', 'Air Terjun Niagara & Washington D.C.']
     }
   ];
 
@@ -392,8 +306,8 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
             </h3>
           </div>
 
-          {/* 4 STYLIZED CATEGORY BUTTONS */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-0.5">
+          {/* 3 STYLIZED CATEGORY BUTTONS */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-0.5">
             
             <button
               onClick={() => setActiveCategory('all')}
@@ -429,18 +343,6 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
             >
               <Compass className="w-4 h-4 shrink-0 text-red-500" />
               <span>{t.dest_cat_out_sumbar}</span>
-            </button>
-
-            <button
-              onClick={() => setActiveCategory('internasional')}
-              className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                activeCategory === 'internasional'
-                  ? 'bg-gradient-to-r from-[#dc2626] to-red-600 text-white shadow-lg shadow-red-600/25 scale-[1.02]'
-                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              <Globe className="w-4 h-4 shrink-0 text-blue-500" />
-              <span>{t.dest_cat_inter}</span>
             </button>
 
           </div>
