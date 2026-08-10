@@ -4,7 +4,7 @@ export const TRANSLATIONS = {
     nav_home: "Beranda",
     nav_about: "Profil & Visi Misi",
     nav_destinations: "Destinasi Tour",
-    nav_packages: "Paket Tour 2026/2027",
+    nav_packages: "Paket Tour",
     nav_rentals: "Sewa Armada",
     nav_gallery: "Galeri",
     nav_contact: "Kontak & Alamat",

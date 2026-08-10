@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import HomePreviews from './components/HomePreviews';
 import AboutPage from './components/AboutPage';
 import PackageTourPage from './components/PackageTourPage';
 import TransportRentPage from './components/TransportRentPage';
@@ -129,6 +130,13 @@ export default function App() {
               onExploreClick={() => handleNavClick('package-tour')} 
               lang={lang} 
               onBookingClick={() => setSelectedCar(CARS[0])} 
+            />
+
+            <HomePreviews 
+              onNavigateToRentals={() => handleNavClick('rentals')}
+              onNavigateToPackages={() => handleNavClick('package-tour')}
+              onSelectCar={handleSelectCar}
+              lang={lang}
             />
 
             <BookingSteps lang={lang} />
