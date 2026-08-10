@@ -444,59 +444,5 @@ export const TOUR_PACKAGES: TourPackage[] = [
     excludes: [
       'Makan & Wahana Water Sport (Opsional)'
     ]
-  },
-
-  // 11. TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND) - INTERNASIONAL
-  {
-    id: 'tour-3-negara-asia',
-    title: 'TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND)',
-    categoryKey: 'internasional',
-    duration: 'Multi-Durasi (3 s/d 7 Hari)',
-    route: ['Malaysia', 'Singapore', 'Thailand (Hatyai)'],
-    routeDisplay: 'Malaysia (KL & Genting) - Singapore (Merlion) - Thailand (Hatyai)',
-    image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional Asia',
-    minPrice: '(Start from Rp 2.400.000)',
-    tiers: [
-      {
-        busType: 'Tour Short Escape (KL - Genting - Melaka)',
-        capacity: '3 Hari 2 Malam (All In)',
-        pricePerPerson: '(Start from Rp 2.400.000/org)',
-        hotelDetails: 'Hotel Bintang 3* / 4* di Kuala Lumpur & Melaka (Gratis Cable Car Genting)',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
-      },
-      {
-        busType: 'Tour 2 Negara (Malaysia - Singapore)',
-        capacity: '4 Hari 3 Malam (All In)',
-        pricePerPerson: '(Start from Rp 3.500.000/org)',
-        hotelDetails: 'Hotel Bintang 3* / 4* di Kuala Lumpur & Singapore',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
-      },
-      {
-        busType: 'Tour 3 Negara (Malaysia - Singapore - Thailand Hatyai)',
-        capacity: '7 Hari 6 Malam (Land Tour Only)',
-        pricePerPerson: '(Start from Rp 4.750.000/org)',
-        hotelDetails: 'Hotel Bintang 3* / 4* di Malaysia, Singapore & Hatyai Thailand',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan (Private Group / Open Trip Flexible)'
-      }
-    ],
-    highlights: [
-      'Ikon Petronas Twin Towers Kuala Lumpur & Genting Highlands',
-      'Merlion Park & Jewel Changi Airport Singapore',
-      'Wisata Kuliner Malam & Belanja Hatyai Thailand',
-      'Gratis Tiket Cable Car Genting Highlands'
-    ],
-    includes: [
-      'Transportasi Privat (Van / Bus Pariwisata AC)',
-      'Penginapan Hotel Bintang 3* & 4*',
-      'Konsumsi Makan Sesuai Program & Air Mineral',
-      'Tour Leader / Guide Berpengalaman',
-      'Gratis Cable Car Genting Highlands'
-    ],
-    excludes: [
-      'Tiket Pesawat PP (Opsional)',
-      'Tipping Guide / Driver',
-      'Pengeluaran Pribadi'
-    ]
   }
 ];

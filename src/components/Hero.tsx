@@ -97,7 +97,6 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                 >
                   <option value="Paket Menginap (Bali, Bromo, Jogja, Dieng, Semarang)">Paket Menginap (Bali, Bromo, Jogja, Dieng, Semarang)</option>
                   <option value="Paket One Day Tour / PP (Lembang, Kuningan, Majalengka, Pangalengan, Anyer)">Paket One Day Tour / PP (Lembang, Kuningan, Majalengka, Pangalengan, Anyer)</option>
-                  <option value="Paket Internasional 3 Negara (Malaysia, Singapore, Thailand)">Paket Internasional 3 Negara (Malaysia, Singapore, Thailand)</option>
                 </select>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-0 pointer-events-none" />
               </div>

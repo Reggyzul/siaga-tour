@@ -44,7 +44,9 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
   const filteredPackages = TOUR_PACKAGES.filter((pkg) => {
     if (activeCategory === 'all') return true;
-    return pkg.categoryKey === activeCategory;
+    if (activeCategory === 'domestik') return !pkg.duration.includes('Pulang Pergi');
+    if (activeCategory === 'internasional') return pkg.duration.includes('Pulang Pergi');
+    return true;
   });
 
   return (
@@ -107,7 +109,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              <Plane className="w-4 h-4 shrink-0 text-blue-500" />
+              <Bus className="w-4 h-4 shrink-0 text-red-500" />
               <span>{t.pkg_filter_internasional}</span>
             </button>
           </div>

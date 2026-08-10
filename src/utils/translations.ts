@@ -46,7 +46,7 @@ export const TRANSLATIONS = {
     // Package Tour Page
     pkg_tag: "PAKET TOUR TAHUN 2026 - 2027",
     pkg_title: "PAKET WISATA MENGINAP & PULANG PERGI (PP)",
-    pkg_subtitle: "Pilihan paket wisata Bali, Bromo, Jogja, Semarang, Dieng, Lembang, Kuningan, Majalengka, Pangalengan, Anyer & Internasional.",
+    pkg_subtitle: "Pilihan paket wisata Bali, Bromo, Jogja, Semarang, Dieng, Lembang, Kuningan, Majalengka, Pangalengan & Anyer.",
     pkg_filter_heading: "PILIH KATEGORI DURASI PAKET TOUR",
     pkg_filter_all: "Semua Paket Wisata",
     pkg_filter_domestik: "Paket Menginap (Multi-Day)",
