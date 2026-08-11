@@ -4,7 +4,7 @@ export const CARS: Car[] = [
   // 1. AVANZA
   {
     id: 'avanza',
-    name: 'Toyota Avanza (All New)',
+    name: 'Toyota Avanza',
     category: 'Mini Bus',
     pricePerDay: 500000,
     priceDisplay: '(Start from Rp 500.000)',
@@ -26,7 +26,7 @@ export const CARS: Car[] = [
   // 2. INNOVA
   {
     id: 'innova',
-    name: 'Toyota Innova (Reborn / Zenix)',
+    name: 'Toyota Innova',
     category: 'Mini Bus',
     pricePerDay: 900000,
     priceDisplay: '(Start from Rp 900.000)',
