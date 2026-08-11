@@ -232,7 +232,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
             <div className="space-y-4">
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                 <img
-                  src="/hiace_premio.avif"
+                  src="/hiace_premio.jpg"
                   alt="Toyota Hiace"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />

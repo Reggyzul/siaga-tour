@@ -144,7 +144,7 @@ export default function HomePreviews({
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
-                <img src="/hiace_premio.avif" alt="Toyota Hiace" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <img src="/hiace_premio.jpg" alt="Toyota Hiace" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
