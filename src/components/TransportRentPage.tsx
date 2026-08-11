@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CARS } from '../data/cars';
 import { Car } from '../types';
-import { Users, CheckCircle2, MessageCircle, Bus, ArrowRight, Sparkles } from 'lucide-react';
+import { Users, CheckCircle2, MessageCircle, Bus, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 import FleetTypeModal, { FleetTypeCategory } from './FleetTypeModal';
@@ -64,20 +64,20 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
           </h2>
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Siaga Tour menyediakan bingkai kartu khusus **Semua Bus**, **Semua Elf**, dan **Semua Hiace** yang menampilkan rincian beragam tipenya melalui pop-up modal.
+            Siaga Tour menyediakan bingkai khusus **Semua Bus**, **Semua Elf**, dan **Semua Hiace** yang menampilkan rincian beragam tipenya melalui pop-up modal.
           </p>
         </div>
 
-        {/* 4 CATEGORY / FLEET CARDS GRID (BUS, ELF, HIACE & MPV) */}
+        {/* 4 CATEGORY / FLEET CARDS GRID (WHITE CARD THEMING) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          {/* CARD 1: SEMUA BUS PARIWISATA */}
+          {/* CARD 1: SEMUA BUS PARIWISATA (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             onClick={() => setActiveModalCategory('bus')}
-            className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-2 border-blue-500 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left text-white"
+            className="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left"
           >
             <div className="space-y-4">
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -86,10 +86,10 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   alt="Semua Armada Bus Pariwisata"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-3 left-3 bg-blue-600 text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
-                  KARTU BUS PARIWISATA
+                  BUS PARIWISATA
                 </div>
 
                 <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
@@ -106,25 +106,25 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
               </div>
 
               <div className="p-5 pt-1 space-y-3">
-                <p className="font-sans text-xs text-slate-300 font-medium leading-relaxed">
+                <p className="font-sans text-xs text-slate-600 font-medium leading-relaxed">
                   Menyediakan Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus VIP Legrest, Medium Bus Standard &amp; Motorhome Luxury.
                 </p>
 
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-sky-400 block">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-600 block">
                   5 Variant Tipe Bus Tersedia
                 </span>
 
-                <div className="space-y-1.5 text-xs text-slate-300">
+                <div className="space-y-1.5 text-xs text-slate-700">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Big Bus VIP Legrest 30 Seat &amp; Eksekutif 59 Seat</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Medium Bus VIP 18 Seat &amp; Standard 35 Seat</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Motorhome Suite VIP Luxury Hotel Berjalan</span>
                   </div>
                 </div>
@@ -137,22 +137,22 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   e.stopPropagation();
                   setActiveModalCategory('bus');
                 }}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Bus className="w-4 h-4" />
-                <span>Lihat Pop-up Tipe Bus</span>
+                <span>Lihat Tipe Bus</span>
               </button>
             </div>
           </motion.div>
 
-          {/* CARD 2: SEMUA ISUZU ELF */}
+          {/* CARD 2: SEMUA ISUZU ELF (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
             onClick={() => setActiveModalCategory('elf')}
-            className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-2 border-blue-500 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left text-white"
+            className="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left"
           >
             <div className="space-y-4">
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -161,10 +161,10 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   alt="Semua Armada Isuzu Elf"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-3 left-3 bg-blue-600 text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
-                  KARTU ISUZU ELF
+                  ISUZU ELF
                 </div>
 
                 <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
@@ -181,25 +181,25 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
               </div>
 
               <div className="p-5 pt-1 space-y-3">
-                <p className="font-sans text-xs text-slate-300 font-medium leading-relaxed">
+                <p className="font-sans text-xs text-slate-600 font-medium leading-relaxed">
                   Menyediakan Isuzu Elf Long 19 Seat, Elf Luxury 10 Seat, Elf Jumbo / Coaster 18 Seat &amp; Elf Grandtour.
                 </p>
 
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-sky-400 block">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-600 block">
                   4 Variant Tipe Elf Tersedia
                 </span>
 
-                <div className="space-y-1.5 text-xs text-slate-300">
+                <div className="space-y-1.5 text-xs text-slate-700">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Isuzu Elf Long 19 Seat Full AC &amp; Audio Karaoke</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Elf Luxury 10 Captain Seat Leather VIP</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Elf Jumbo / Coaster High Ceiling 18 Seat</span>
                   </div>
                 </div>
@@ -212,22 +212,22 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   e.stopPropagation();
                   setActiveModalCategory('elf');
                 }}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Bus className="w-4 h-4" />
-                <span>Lihat Pop-up Tipe Elf</span>
+                <span>Lihat Tipe Elf</span>
               </button>
             </div>
           </motion.div>
 
-          {/* CARD 3: SEMUA TOYOTA HIACE */}
+          {/* CARD 3: SEMUA TOYOTA HIACE (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.16 }}
             onClick={() => setActiveModalCategory('hiace')}
-            className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-2 border-blue-500 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left text-white"
+            className="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-pointer text-left"
           >
             <div className="space-y-4">
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -236,10 +236,10 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   alt="Semua Toyota Hiace"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-3 left-3 bg-blue-600 text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
-                  KARTU TOYOTA HIACE
+                  TOYOTA HIACE
                 </div>
 
                 <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
@@ -256,21 +256,21 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
               </div>
 
               <div className="p-5 pt-1 space-y-3">
-                <p className="font-sans text-xs text-slate-300 font-medium leading-relaxed">
+                <p className="font-sans text-xs text-slate-600 font-medium leading-relaxed">
                   Toyota Hiace Premio 14 Seat, Hiace Premio Luxury VIP, Hiace Commuter 14 Seat &amp; Hiace Commuter Luxury Seat.
                 </p>
 
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-sky-400 block">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-600 block">
                   4 Variant Tipe Hiace Tersedia
                 </span>
 
-                <div className="space-y-1.5 text-xs text-slate-300 font-semibold">
+                <div className="space-y-1.5 text-xs text-slate-700 font-semibold">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Hiace Premio 14 Seat Dual Zone Silent Kabin</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-green-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0" />
                     <span>Hiace Commuter 14 Seat &amp; Luxury Leather</span>
                   </div>
                 </div>
@@ -283,10 +283,10 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
                   e.stopPropagation();
                   setActiveModalCategory('hiace');
                 }}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Bus className="w-4 h-4" />
-                <span>Lihat Pop-up Tipe Hiace</span>
+                <span>Lihat Tipe Hiace</span>
               </button>
             </div>
           </motion.div>

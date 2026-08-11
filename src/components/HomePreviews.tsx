@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { CARS } from '../data/cars';
 import { TOUR_PACKAGES } from '../data/packages';
 import { Car } from '../types';
-import { Users, Calendar, ArrowRight, ChevronDown, Sparkles, Bus, Layers, ShieldCheck } from 'lucide-react';
+import { Users, Calendar, ArrowRight, ChevronDown, Sparkles, Bus } from 'lucide-react';
 import FleetTypeModal, { FleetTypeCategory } from './FleetTypeModal';
 
 interface HomePreviewsProps {
@@ -28,7 +28,7 @@ export default function HomePreviews({
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. KATALOG ARMADA UNGGULAN (KARTU BUS, ELF, DAN HIACE DALAM BINGKAI KATEGORI MODAL POP-UP) */}
+      {/* 1. KATALOG ARMADA UNGGULAN (WHITE CARD THEMING) */}
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
@@ -44,11 +44,11 @@ export default function HomePreviews({
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Tersedia bingkai kartu khusus **Semua Bus**, **Semua Elf**, dan **Semua Hiace** yang menampilkan rincian beragam tipenya melalui pop-up modal.
+            Tersedia pilihan sewa Toyota Avanza/Innova, **Toyota Hiace**, **Isuzu Elf**, serta **Bus Pariwisata**.
           </p>
         </div>
 
-        {/* Fleet Grid: 4 Cards (Bus, Elf, Hiace masing-masing 1 kartu dengan Pop-Up) */}
+        {/* Fleet Grid: 4 Cards (Clean White Theme) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
           
           {/* Card 1: Avanza & Innova MPV */}
@@ -88,53 +88,44 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 2: KARTU KHUSUS — SEMUA TOYOTA HIACE */}
+          {/* Card 2: SEMUA TOYOTA HIACE (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
             onClick={() => setActiveModalCategory('hiace')}
-            className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 border border-blue-400 rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left text-white"
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left"
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
                 <img src="/hiace_premio.avif" alt="Semua Toyota Hiace" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
-                  KARTU TOYOTA HIACE
+                  TOYOTA HIACE
                 </div>
 
-                <div className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs border border-slate-200">
                   <Users className="w-3 h-3 text-blue-600" />
                   <span>10 - 14 Kursi</span>
-                </div>
-
-                <div className="absolute bottom-2 left-2.5 right-2.5 text-white">
-                  <span className="text-[10px] font-extrabold uppercase text-sky-300 block tracking-wider">
-                    4 VARIANT TIPE HIACE
-                  </span>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-display font-black text-base text-white tracking-tight uppercase group-hover:text-sky-300 transition-colors">
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">
                   Semua Toyota Hiace
                 </h3>
-                <p className="text-[11px] text-slate-300 font-medium line-clamp-2 mt-1">
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">
                   Hiace Premio 14 Seat, Premio Luxury VIP, Commuter 14 Seat &amp; Luxury Seat.
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
                 <div>
                   <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                  <span className="font-display font-black text-sm text-sky-300">Start Rp 1.100.000</span>
+                  <span className="font-display font-black text-sm text-blue-600">Start Rp 1.100.000</span>
                 </div>
-                <span className="text-[9px] font-extrabold text-sky-300 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-700/60">
-                  Detail Pop-up ➔
-                </span>
               </div>
             </div>
 
@@ -144,7 +135,7 @@ export default function HomePreviews({
                   e.stopPropagation();
                   setActiveModalCategory('hiace');
                 }} 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Lihat Tipe Hiace</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -152,53 +143,44 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 3: KARTU KHUSUS — SEMUA ISUZU ELF */}
+          {/* Card 3: SEMUA ISUZU ELF (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.16 }}
             onClick={() => setActiveModalCategory('elf')}
-            className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 border border-blue-400 rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left text-white"
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left"
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
                 <img src="/elf_long.avif" alt="Semua Armada Isuzu Elf" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
-                  KARTU ISUZU ELF
+                  ISUZU ELF
                 </div>
 
-                <div className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs border border-slate-200">
                   <Users className="w-3 h-3 text-blue-600" />
                   <span>10 - 19 Kursi</span>
-                </div>
-
-                <div className="absolute bottom-2 left-2.5 right-2.5 text-white">
-                  <span className="text-[10px] font-extrabold uppercase text-sky-300 block tracking-wider">
-                    4 VARIANT TIPE ELF
-                  </span>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-display font-black text-base text-white tracking-tight uppercase group-hover:text-sky-300 transition-colors">
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">
                   Semua Isuzu Elf
                 </h3>
-                <p className="text-[11px] text-slate-300 font-medium line-clamp-2 mt-1">
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">
                   Elf Long 19 Seat, Elf Luxury 10 Seat, Elf Jumbo/Coaster 18 Seat &amp; Elf Grandtour.
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
                 <div>
                   <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                  <span className="font-display font-black text-sm text-sky-300">Start Rp 1.100.000</span>
+                  <span className="font-display font-black text-sm text-blue-600">Start Rp 1.100.000</span>
                 </div>
-                <span className="text-[9px] font-extrabold text-sky-300 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-700/60">
-                  Detail Pop-up ➔
-                </span>
               </div>
             </div>
 
@@ -208,7 +190,7 @@ export default function HomePreviews({
                   e.stopPropagation();
                   setActiveModalCategory('elf');
                 }} 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Lihat Tipe Elf</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -216,53 +198,44 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 4: KARTU KHUSUS — SEMUA BUS PARIWISATA */}
+          {/* Card 4: SEMUA BUS PARIWISATA (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.24 }}
             onClick={() => setActiveModalCategory('bus')}
-            className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-2 border-blue-500 rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left text-white"
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left"
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
                 <img src="/miyor.avif" alt="Semua Armada Bus Pariwisata" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
-                  KARTU BUS PARIWISATA
+                  BUS PARIWISATA
                 </div>
 
-                <div className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs border border-slate-200">
                   <Users className="w-3 h-3 text-blue-600" />
                   <span>18 - 59 Kursi</span>
-                </div>
-
-                <div className="absolute bottom-2 left-2.5 right-2.5 text-white">
-                  <span className="text-[10px] font-extrabold uppercase text-sky-300 block tracking-wider">
-                    5 VARIANT TIPE BUS
-                  </span>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-display font-black text-base text-white tracking-tight uppercase group-hover:text-sky-300 transition-colors">
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">
                   Semua Bus Pariwisata
                 </h3>
-                <p className="text-[11px] text-slate-300 font-medium line-clamp-2 mt-1">
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">
                   Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus VIP, Medium Bus Standard &amp; Motorhome.
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
                 <div>
                   <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                  <span className="font-display font-black text-sm text-sky-300">Start Rp 2.000.000</span>
+                  <span className="font-display font-black text-sm text-blue-600">Start Rp 2.000.000</span>
                 </div>
-                <span className="text-[9px] font-extrabold text-sky-300 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-700/60">
-                  Detail Pop-up ➔
-                </span>
               </div>
             </div>
 
@@ -272,7 +245,7 @@ export default function HomePreviews({
                   e.stopPropagation();
                   setActiveModalCategory('bus');
                 }} 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Lihat Tipe Bus</span>
                 <ArrowRight className="w-3.5 h-3.5" />
