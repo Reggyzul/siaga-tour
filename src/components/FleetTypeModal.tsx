@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Users, CheckCircle2, MessageCircle, Bus, ShieldCheck } from 'lucide-react';
+import { X, Users, CheckCircle2, MessageCircle, Bus, Camera } from 'lucide-react';
 import { CARS } from '../data/cars';
 import { Car } from '../types';
 
@@ -97,8 +97,51 @@ export default function FleetTypeModal({ category, onClose, onSelectCar }: Fleet
             </div>
           </div>
 
-          {/* Modal Scrollable Body - STRICTLY TEXT ONLY (NO IMAGES) */}
-          <div className="p-4 sm:p-6 overflow-y-auto space-y-4 flex-1 bg-slate-50">
+          {/* Modal Scrollable Body */}
+          <div className="p-4 sm:p-6 overflow-y-auto space-y-5 flex-1 bg-slate-50">
+            
+            {/* GALERI FOTO COMPACT UNTUK BUS PARIWISATA */}
+            {category === 'bus' && (
+              <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 shadow-xs space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-extrabold uppercase text-slate-800 tracking-wider flex items-center gap-1.5">
+                    <Camera className="w-4 h-4 text-blue-600" />
+                    <span>Galeri Unit Bus Pariwisata Siaga Tour:</span>
+                  </span>
+                  <span className="text-[10px] text-blue-700 font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
+                    3 Foto Unit
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
+                  <div className="relative rounded-xl overflow-hidden aspect-[16/10] bg-slate-900 shadow-xs group">
+                    <img src="/bus_red.jpg" alt="Big Bus Jetbus 5 Red Edition" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <span className="absolute bottom-1.5 left-2 text-[9px] font-bold text-white uppercase drop-shadow-sm">
+                      Jetbus 5 Red
+                    </span>
+                  </div>
+
+                  <div className="relative rounded-xl overflow-hidden aspect-[16/10] bg-slate-900 shadow-xs group">
+                    <img src="/bus_blue.jpg" alt="Big Bus Tentrem Blue Edition" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <span className="absolute bottom-1.5 left-2 text-[9px] font-bold text-white uppercase drop-shadow-sm">
+                      Tentrem Blue
+                    </span>
+                  </div>
+
+                  <div className="relative rounded-xl overflow-hidden aspect-[16/10] bg-slate-900 shadow-xs group">
+                    <img src="/bus_pink.jpg" alt="Medium Bus Grand Touristo Pink" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <span className="absolute bottom-1.5 left-2 text-[9px] font-bold text-white uppercase drop-shadow-sm">
+                      Touristo Magenta
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* VARIANT DETAILS GRID */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {filteredCars.map((car) => (
                 <div
@@ -106,7 +149,7 @@ export default function FleetTypeModal({ category, onClose, onSelectCar }: Fleet
                   className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-3 group hover:border-blue-300"
                 >
                   <div className="space-y-3">
-                    {/* Header Info (No Image) */}
+                    {/* Header Info */}
                     <div className="flex items-start justify-between gap-2 border-b border-slate-100 pb-3">
                       <div>
                         <span className="text-[10px] font-extrabold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded uppercase tracking-wider inline-block mb-1 border border-blue-200/60">
