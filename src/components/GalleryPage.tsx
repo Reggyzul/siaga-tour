@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Camera, Sparkles, X, MapPin, Users, Globe, Eye, ZoomIn } from 'lucide-react';
+import { Camera, Sparkles, X, MapPin, Users, ZoomIn, ChevronLeft } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface GalleryPageProps {
@@ -16,194 +16,137 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const galleryItems = [
     {
       id: 1,
-      title: 'Tour Silaturahmi Sipiso-Piso & Danau Toba',
-      subtitle: 'Keluarga Besar Sepakat bersama Siaga Tour',
-      location: 'Air Terjun Sipiso-Piso, Danau Toba, Sumatera Utara',
-      image: '/gallery_sipisopiso.avif',
-      badge: 'Danau Toba & Sipiso-Piso'
+      title: 'Fun Day Trip SMA 46 Jakarta',
+      subtitle: 'Kuningan West Java (Telaga Cicerem & Arunika)',
+      location: 'Kuningan, Jawa Barat',
+      image: '/gallery_sma46_kuningan.jpg',
+      badge: 'Fun Day Trip'
     },
     {
       id: 2,
-      title: 'Tour Monumen Kapal Apung W.K.B Banda Aceh',
-      subtitle: 'Kunjungan Wisata Sejarah & Edukasi Tsunami Aceh',
-      location: 'Monumen Kapal Apung PLN, Banda Aceh',
-      image: '/gallery_kapal_apung.avif',
-      badge: 'Banda Aceh Tour'
+      title: 'Petualangan Fun Offroad Jeep',
+      subtitle: 'Wisata Offroad Rombongan Pantai & Pegunungan',
+      location: 'Kawasan Wisata Offroad',
+      image: '/gallery_jeep_offroad.jpg',
+      badge: 'Jeep Offroad'
     },
     {
       id: 3,
-      title: 'Wisata Keagamaan Masjid Raya Baiturrahman',
-      subtitle: 'Momentum Kebersamaan Peserta Tour Aceh Siaga Tour',
-      location: 'Masjid Raya Baiturrahman, Banda Aceh',
-      image: '/gallery_baiturrahman.avif',
-      badge: 'Masjid Baiturrahman'
+      title: 'Gathering HAIRCODE AEON BSD',
+      subtitle: 'Villa Shinta Corner & Rafting Pangalengan',
+      location: 'Pangalengan, Bandung Selatan',
+      image: '/gallery_haircode_pangalengan.jpg',
+      badge: 'Outbound Gathering'
     },
     {
       id: 4,
-      title: 'Tour Silaturahmi Senggigi View Lombok',
-      subtitle: 'Peserta Tour Nusantara di Spot Ikonik Senggigi',
-      location: 'Senggigi View Beach, Lombok, NTB',
-      image: '/gallery_senggigi.avif',
-      badge: 'Senggigi Lombok'
+      title: 'Open Trip Petualangan Bali With Love',
+      subtitle: 'Wisata Rombongan Black Lava & Kintamani Bali',
+      location: 'Kintamani & Black Lava, Bali',
+      image: '/gallery_bali_with_love.jpg',
+      badge: 'Bali With Love'
     },
     {
       id: 5,
-      title: 'Tour Silaturahmi Candi Prambanan Jogja',
-      subtitle: 'Keluarga Besar Sepakat Jelajah Heritage Nusantara',
-      location: 'Kompleks Candi Prambanan, DI Yogyakarta',
-      image: '/gallery_prambanan.avif',
-      badge: 'Candi Prambanan Jogja'
-    },
-    {
-      id: 6,
-      title: 'Tour Tugu Kilometer 0 Indonesia Sabang',
-      subtitle: 'Titik Ujung Barat Indonesia bersama Rombongan Keluarga Besar Sepakat',
-      location: 'Tugu Kilometer 0 Indonesia, Sabang, Aceh',
-      image: '/gallery_sabang.avif',
-      badge: 'Sabang Kilometer 0'
-    },
-    {
-      id: 7,
-      title: 'Tour Wisata Keagamaan Masjid Istiqlal Jakarta',
-      subtitle: 'Kunjungan Rombongan Peserta Wisata di Masjid Istiqlal',
-      location: 'Masjid Istiqlal, DKI Jakarta',
-      image: '/gallery_istiqlal.avif',
-      badge: 'Istiqlal Jakarta'
-    },
-    {
-      id: 8,
-      title: 'Tour Internasional Petronas Twin Towers',
-      subtitle: 'Kunjungan Wisata Mancanegara Kuala Lumpur Malaysia',
-      location: 'Petronas Twin Towers, Kuala Lumpur, Malaysia',
-      image: '/gallery_petronas.avif',
-      badge: 'Kuala Lumpur Malaysia'
-    },
-    {
-      id: 9,
-      title: 'Tour Mancanegara Bangkok & Thailand',
-      subtitle: 'Peserta MT. Sakinah Warahmah BMKT Padang Panjang di Patung Sleeping Buddha',
-      location: 'Bangkok & Hat Yai, Thailand',
-      image: '/gallery_thailand.avif',
-      badge: 'Thailand Tour'
-    },
-    {
-      id: 10,
-      title: 'Tour HeHa Sky View & Jogja bersama Bus Zivanes',
-      subtitle: 'Kebersamaan Rombongan Siaga Tour & Team Zivanes Bus',
-      location: 'HeHa Sky View, Gunungkidul, Yogyakarta',
-      image: '/gallery_heha.avif',
-      badge: 'HeHa Jogja Tour'
-    },
-    {
-      id: 11,
-      title: 'Tour Jeep Offroad Gunung Bromo & Pasir Berbisik',
-      subtitle: 'Petualangan Seru Peserta Rombongan Siaga Tour di Bromo',
-      location: 'Kawasan Wisata Gunung Bromo, Jawa Timur',
-      image: '/gallery_bromo.avif',
-      badge: 'Bromo Offroad'
-    },
-    {
-      id: 12,
-      title: 'Tour Silaturahmi Jam Gadang Bukittinggi',
-      subtitle: 'Keluarga Besar Bagindo bersama Team Siaga Tour',
-      location: 'Taman Jam Gadang, Bukittinggi, Sumatera Barat',
-      image: '/gallery_jam_gadang.avif',
-      badge: 'Jam Gadang Bukittinggi'
+      title: 'Wisata Religi Masjid Sheikh Zayed',
+      subtitle: 'Kunjungan Rombongan Wisata Keagamaan Solo',
+      location: 'Masjid Raya Sheikh Zayed, Surakarta',
+      image: '/gallery_masjid_zayed.jpg',
+      badge: 'Wisata Religi'
     }
   ];
 
   return (
     <div className="bg-slate-50 text-[#0d1b37] min-h-screen pt-20 text-left">
       
-      {/* 1. TOP HEADER BANNER (Bayu Buana Style Header with Real Tour Photo Background) */}
-      <div className="relative w-full h-[250px] sm:h-[320px] bg-slate-950 text-white overflow-hidden flex items-center justify-center">
+      {/* 1. TOP HEADER BANNER */}
+      <div className="relative w-full h-[260px] sm:h-[320px] bg-slate-950 text-white overflow-hidden flex items-center justify-center">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-45 transform scale-105 transition-transform duration-1000"
+          className="absolute inset-0 bg-cover bg-center opacity-40 scale-105"
           style={{
-            backgroundImage: `url('/gallery_sipisopiso.avif')`
+            backgroundImage: `url('/gallery_bali_with_love.jpg')`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/65 to-slate-950/95" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/40" />
 
-        <div className="relative z-10 text-center space-y-3 px-4 max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/90 text-white font-extrabold text-[11px] uppercase tracking-widest mb-1 shadow-lg"
-          >
-            <Camera className="w-4 h-4 text-red-300" />
-            <span>GALERI DOKUMENTASI PERJALANAN CV. ANUGRAH PARIWISATA</span>
-          </motion.div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-3">
+          <div className="inline-flex items-center gap-2 bg-blue-600/30 border border-blue-400/40 px-3.5 py-1 rounded-full text-sky-300 text-xs font-bold uppercase tracking-widest">
+            <Camera className="w-4 h-4 text-sky-400" />
+            <span>GALERI DOKUMENTASI RESMI</span>
+          </div>
 
-          <motion.h1 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight uppercase drop-shadow-lg"
-          >
-            Moment & Tour Gallery
-          </motion.h1>
+          <h1 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white drop-shadow-md">
+            Dokumentasi Siaga Tour
+          </h1>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-sans text-xs sm:text-sm font-bold text-slate-300 uppercase tracking-widest"
-          >
-            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer transition-colors">HOME</span> / GALLERY DOKUMENTASI
-          </motion.p>
+          <div className="flex items-center justify-center gap-2 text-xs font-bold text-slate-300 uppercase tracking-wider">
+            <span onClick={onNavigateHome} className="hover:text-blue-400 cursor-pointer transition-colors flex items-center gap-1">
+              <ChevronLeft className="w-4 h-4" /> BERANDA
+            </span>
+            <span>/</span>
+            <span className="text-sky-400">GALERI DOKUMENTASI RESMI</span>
+          </div>
         </div>
       </div>
 
-      {/* MAIN CONTENT CONTAINER */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
+      {/* 2. MAIN GALLERY SECTION */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
         
-        {/* Subtitle Description */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37]">
-            Dokumentasi Perjalanan & Tour Silaturahmi
+        {/* Intro Info */}
+        <div className="text-center max-w-3xl mx-auto space-y-2">
+          <h2 className="font-display font-black text-2xl sm:text-3xl text-slate-900 tracking-tight uppercase">
+            Momen Berkesan Bersama Peserta
           </h2>
-          <div className="w-20 h-1 bg-[#dc2626] mx-auto rounded-full" />
-          <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Kumpulan momen kebersamaan dan kenangan indah peserta rombongan tour silaturahmi Siaga Tour di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Bromo, Jam Gadang, Jakarta, Jogja, Lombok, Malaysia, Thailand).
+          <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
+          <p className="font-sans text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+            Kumpulan dokumentasi foto asli kegiatan Study Tour, Outbound Gathering, Wisata Religi &amp; Petualangan Rombongan Siaga Tour.
           </p>
         </div>
 
-        {/* Gallery Grid: Modern Cards Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {galleryItems.map((item, index) => (
             <motion.div
-              layout
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               key={item.id}
-              onClick={() => setSelectedPhoto({ image: item.image, title: item.title, subtitle: item.subtitle, location: item.location })}
-              className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-slate-950 border border-slate-200/60"
+              onClick={() => setSelectedPhoto(item)}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-end aspect-[4/3]"
             >
+              {/* Image */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-95 group-hover:opacity-100"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/35 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 
-              {/* Badge Tag */}
-              <div className="absolute top-3.5 left-3.5 bg-[#dc2626] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md z-10">
-                {item.badge}
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+
+              {/* Badge Top Left */}
+              <div className="absolute top-4 left-4 z-10">
+                <span className="bg-blue-600 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full shadow-md border border-blue-400/30">
+                  {item.badge}
+                </span>
               </div>
 
-              {/* Zoom Icon Floater */}
-              <div className="absolute top-3.5 right-3.5 bg-white/90 p-2 rounded-full text-slate-900 opacity-0 group-hover:opacity-100 transition-opacity shadow-md z-10">
-                <ZoomIn className="w-4 h-4 text-[#dc2626]" />
-              </div>
-
-              {/* Card Footer Content */}
-              <div className="absolute bottom-4 left-4 right-4 text-left space-y-1.5 z-10">
-                <div className="flex items-center gap-1.5 text-[11px] font-bold text-red-300">
-                  <MapPin className="w-3.5 h-3.5 shrink-0 text-red-400" />
-                  <span className="truncate">{item.location}</span>
+              {/* Zoom Icon Top Right */}
+              <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg">
+                  <ZoomIn className="w-4 h-4" />
                 </div>
-                
-                <h3 className="font-display font-black text-lg text-white leading-tight group-hover:text-red-300 transition-colors">
+              </div>
+
+              {/* Content Bottom */}
+              <div className="relative z-10 p-5 space-y-1.5 text-left text-white">
+                <div className="flex items-center gap-1 text-[11px] font-bold text-sky-300">
+                  <MapPin className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+                  <span>{item.location}</span>
+                </div>
+
+                <h3 className="font-display font-black text-lg tracking-tight uppercase leading-snug group-hover:text-sky-300 transition-colors">
                   {item.title}
                 </h3>
 
@@ -217,53 +160,55 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
 
       </div>
 
-      {/* Lightbox Modal Zoom */}
+      {/* LIGHTBOX POPUP MODAL */}
       <AnimatePresence>
         {selectedPhoto && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedPhoto(null)}
-            className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4"
-          >
-            <div 
-              onClick={(e) => e.stopPropagation()} 
-              className="relative max-w-5xl w-full bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 text-left"
+          <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedPhoto(null)}
+              className="fixed inset-0 bg-slate-950/90 backdrop-blur-md"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="relative z-10 max-w-4xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-2xl text-left"
             >
               <button
                 onClick={() => setSelectedPhoto(null)}
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-950/70 hover:bg-slate-950 text-white flex items-center justify-center backdrop-blur-md transition-colors cursor-pointer border border-slate-700 shadow-md"
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer border-2 border-white"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 stroke-[2.5]" />
               </button>
 
-              <div className="relative bg-black flex items-center justify-center max-h-[75vh] overflow-hidden">
+              <div className="relative aspect-[16/10] bg-slate-950">
                 <img
                   src={selectedPhoto.image}
                   alt={selectedPhoto.title}
-                  className="w-full h-auto max-h-[75vh] object-contain mx-auto"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
-              <div className="p-6 bg-slate-900 space-y-2 border-t border-slate-800">
-                <div className="flex items-center gap-2 text-xs font-bold text-red-400">
-                  <MapPin className="w-4 h-4 text-red-400 shrink-0" />
+              <div className="p-6 bg-slate-900 text-white space-y-2">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-sky-400 uppercase">
+                  <MapPin className="w-4 h-4 text-sky-400" />
                   <span>{selectedPhoto.location}</span>
                 </div>
-                <h3 className="font-display font-black text-xl text-white">
+                <h3 className="font-display font-black text-xl text-white uppercase">
                   {selectedPhoto.title}
                 </h3>
-                <p className="font-sans text-xs sm:text-sm text-slate-300 font-medium">
+                <p className="font-sans text-xs text-slate-300 font-medium">
                   {selectedPhoto.subtitle}
                 </p>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
 
     </div>
   );
 }
-
