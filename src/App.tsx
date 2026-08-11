@@ -188,7 +188,7 @@ export default function App() {
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={handleWhatsAppChat}
+          onClick={handleFloatingWA}
           className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:bg-[#20ba5a] transition-all cursor-pointer border-2 border-white relative group"
           id="floating-whatsapp-widget"
           title="Chat WhatsApp Resmi Siaga Tour"
