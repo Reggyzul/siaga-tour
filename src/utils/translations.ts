@@ -12,7 +12,7 @@ export const TRANSLATIONS = {
 
     // Top Bar
     topbar_address: "Lokasi: Pejaten Barat, Pasar Minggu, Jakarta Selatan | Buka 24 Jam",
-    topbar_whatsapp: "Konsultasi Tour WA (Tri Jaya Mulyana): 0852-8344-8585",
+    topbar_whatsapp: "Konsultasi Tour WA (Bang Jaya): 0852-8344-8585",
     topbar_service: "Pengalaman Sejak 2010 | PT. SIAGA WISATA JAYA",
 
     // Hero Section
@@ -20,7 +20,7 @@ export const TRANSLATIONS = {
     hero_title_1: "SIAGA TOUR & TRAVEL",
     hero_motto: "SOLUSI PERJALANAN WISATA TERBAIK, AMANAH & PELAYANAN PRIMA",
     hero_subtitle: "PT. SIAGA WISATA JAYA (Siaga Tour) — Agen Perjalanan Wisata Terpercaya Sejak Tahun 2010. Melayani Study Tour, Wisata Edukasi, Wisata Religi, Wisata Umum, Outbound, Gathering, MICE, serta Sewa Bus Pariwisata & Kendaraan.",
-    hero_cta_wa: "Konsultasi WA (Tri Jaya Mulyana)",
+    hero_cta_wa: "Konsultasi WA (Bang Jaya)",
     hero_cta_cars: "Lihat Katalog Armada & Sewa",
     search_dest_cat: "Kategori Paket Wisata",
     search_travel_date: "Rencana Keberangkatan",
@@ -38,7 +38,7 @@ export const TRANSLATIONS = {
     dest_cat_out_sumbar: "Nusantara",
     dest_cat_inter: "Internasional",
     dest_spots_label: "Fasilitas & Layanan Unggulan:",
-    dest_wa_consult: "Konsultasi via WA (Tri Jaya Mulyana)",
+    dest_wa_consult: "Konsultasi via WA (Bang Jaya)",
     dest_view_all: "Lihat Selengkapnya",
     dest_breadcrumb_home: "BERANDA",
     dest_breadcrumb_page: "DESTINASI WISATA",
@@ -70,7 +70,7 @@ export const TRANSLATIONS = {
     about_title_1: "PT. SIAGA WISATA JAYA",
     about_title_2: "Siaga Tour — Berpengalaman Sejak Tahun 2010",
     about_desc_1: "PT. SIAGA WISATA JAYA (Siaga Tour) adalah agen perjalanan wisata profesional yang berpusat di Pejaten Barat, Pasar Minggu, Jakarta Selatan. Berpengalaman sejak tahun 2010 dalam melayani ribuan wisatawan domestik maupun mancanegara.",
-    about_desc_2: "Dipimpin oleh Bpk. Tri Jaya Mulyana, kami menyediakan layanan lengkap mulai dari Study Tour, Wisata Edukasi, Wisata Religi, Outbound, Gathering Perusahaan, MICE, hingga Sewa Bus Pariwisata, Hiace, Elf, MPV & Antar-Jemput Karyawan.",
+    about_desc_2: "Dipimpin oleh Bang Jaya, kami menyediakan layanan lengkap mulai dari Study Tour, Wisata Edukasi, Wisata Religi, Outbound, Gathering Perusahaan, MICE, hingga Sewa Bus Pariwisata, Hiace, Elf, MPV & Antar-Jemput Karyawan.",
     about_read_more: "Lihat Selengkapnya",
     about_read_less: "Tutup Detail",
     about_badge: "PENGALAMAN SEJAK 2010",
@@ -99,7 +99,7 @@ export const TRANSLATIONS = {
     strength_price_title: "Armada Lengkap & Terawat",
     strength_price_desc: "Pilihan sewa Avanza, Innova, Hiace, Elf, Medium Bus hingga Big Bus VIP Legrest & Motorhome.",
     strength_time_title: "Pelayanan Prima & Amanah",
-    strength_time_desc: "Didampingi Tour Guide & Tour Leader profesional di bawah bimbingan Bpk. Tri Jaya Mulyana.",
+    strength_time_desc: "Didampingi Tour Guide & Tour Leader profesional di bawah bimbingan Bang Jaya.",
 
     // Cars Section
     cars_tag: "KATALOG SEWA ARMADA KENDARAAN",
@@ -118,7 +118,7 @@ export const TRANSLATIONS = {
     steps_desc: "Proses booking tour cepat, transparan, dan amanah bersama PT. SIAGA WISATA JAYA.",
     step_1_title: "Pilih Paket & Armada",
     step_1_desc: "Tentukan rute wisata (Bali, Bromo, Jogja, Dieng, Lembang, Anyer, dll) dan armada sesuai kebutuhan.",
-    step_2_title: "Konsultasi dengan Pak Tri Jaya",
+    step_2_title: "Konsultasi dengan Bang Jaya",
     step_2_desc: "Hubungi WhatsApp 0852-8344-8585 untuk penyusunan itinerary, penawaran khusus & skema pembayaran.",
     step_3_title: "Nikmati Tour Prima & Amanah",
     step_3_desc: "Nikmati pengalaman wisata berkesan didampingi Tour Leader & driver profesional.",
@@ -134,7 +134,7 @@ export const TRANSLATIONS = {
 
     // Booking Modal
     modal_title: "FORM RESERVASI SIAGA TOUR",
-    modal_desc: "Lengkapi draf reservasi di bawah ini untuk terhubung langsung dengan Bpk. Tri Jaya Mulyana via WA 0852-8344-8585.",
+    modal_desc: "Lengkapi draf reservasi di bawah ini untuk terhubung langsung dengan Bang Jaya via WA 0852-8344-8585.",
     modal_summary_base: "Paket / Armada",
     modal_summary_total_days: "Durasi Perjalanan",
     modal_field_name: "Nama Pemesan / Instansi",
@@ -161,7 +161,7 @@ export const TRANSLATIONS = {
 
     // Top Bar
     topbar_address: "Location: Pejaten Barat, Pasar Minggu, South Jakarta | Open 24/7",
-    topbar_whatsapp: "Tour Consultation WA (Tri Jaya Mulyana): +62 812-8322-9616",
+    topbar_whatsapp: "Tour Consultation WA (Bang Jaya): 0852-8344-8585",
     topbar_service: "Established Since 2010 | PT. SIAGA WISATA JAYA",
 
     // Hero Section
@@ -169,7 +169,7 @@ export const TRANSLATIONS = {
     hero_title_1: "SIAGA TOUR & TRAVEL",
     hero_motto: "BEST TOUR AGENT, TRUSTED & EXCELLENT SERVICE",
     hero_subtitle: "PT. SIAGA WISATA JAYA (Siaga Tour) — Trusted Tour & Travel Agent Since 2010. Serving Study Tours, Educational Trips, Religious Tours, Outbound, Gathering, MICE, and Bus & Transport Rentals.",
-    hero_cta_wa: "Consult via WA (Tri Jaya Mulyana)",
+    hero_cta_wa: "Consult via WA (Bang Jaya)",
     hero_cta_cars: "View Vehicles & Fleet",
     search_dest_cat: "Tour Package Category",
     search_travel_date: "Departure Date",
@@ -187,7 +187,7 @@ export const TRANSLATIONS = {
     dest_cat_out_sumbar: "Nusantara",
     dest_cat_inter: "International",
     dest_spots_label: "Key Features & Amenities:",
-    dest_wa_consult: "Consult WA (Tri Jaya Mulyana)",
+    dest_wa_consult: "Consult WA (Bang Jaya)",
     dest_view_all: "View All Destinations",
     dest_breadcrumb_home: "HOME",
     dest_breadcrumb_page: "DESTINATIONS",
@@ -212,14 +212,14 @@ export const TRANSLATIONS = {
     pkg_modal_includes: "Included Features",
     pkg_modal_excludes: "Excluded",
     pkg_modal_selected: "Selected Option",
-    pkg_modal_wa_btn: "Book via WhatsApp +62 812-8322-9616",
+    pkg_modal_wa_btn: "Book via WhatsApp 0852-8344-8585",
 
     // About Section (Visi & Misi)
     about_tag: "COMPANY PROFILE & VISION MISSION",
     about_title_1: "PT. SIAGA WISATA JAYA",
     about_title_2: "Siaga Tour — Experienced Since 2010",
     about_desc_1: "PT. SIAGA WISATA JAYA (Siaga Tour) is a professional tour & travel agency based in Pejaten Barat, Pasar Minggu, South Jakarta. Operating since 2010, serving thousands of domestic and expatriate travelers.",
-    about_desc_2: "Led by Mr. Tri Jaya Mulyana, we provide Study Tours, Educational Trips, Religious Tours, Outbound, Corporate Gatherings, MICE, and Executive Bus & Fleet Rentals.",
+    about_desc_2: "Led by Bang Jaya, we provide Study Tours, Educational Trips, Religious Tours, Outbound, Corporate Gatherings, MICE, and Executive Bus & Fleet Rentals.",
     about_read_more: "Read More",
     about_read_less: "Close Details",
     about_badge: "EXPERIENCED SINCE 2010",
@@ -248,7 +248,7 @@ export const TRANSLATIONS = {
     strength_price_title: "Complete Fleet",
     strength_price_desc: "Rentals for Avanza, Innova, Hiace, Elf, Medium Bus, and Big Bus VIP Legrest.",
     strength_time_title: "Excellent Service",
-    strength_time_desc: "Guided by professional Tour Leaders under Mr. Tri Jaya Mulyana.",
+    strength_time_desc: "Guided by professional Tour Leaders under Bang Jaya.",
 
     // Cars Section
     cars_tag: "VEHICLE RENTAL CATALOG",
@@ -259,7 +259,7 @@ export const TRANSLATIONS = {
     cars_transmission_manual: "Manual",
     cars_included_label: "Amenities & Services:",
     cars_driver_friendly: "Experienced Driver & Friendly Crew",
-    cars_book_btn: "Consult WA +62 812-8322-9616",
+    cars_book_btn: "Consult WA 0852-8344-8585",
 
     // Steps
     steps_tag: "PRACTICAL BOOKING STEPS",
@@ -267,8 +267,8 @@ export const TRANSLATIONS = {
     steps_desc: "Fast, transparent, and trusted booking process with PT. SIAGA WISATA JAYA.",
     step_1_title: "Choose Package & Fleet",
     step_1_desc: "Select your destination (Bali, Bromo, Jogja, Dieng, Lembang, Anyer, etc.) and fleet.",
-    step_2_title: "Consult with Mr. Tri Jaya",
-    step_2_desc: "Contact WhatsApp +62 812-8322-9616 for itinerary & special offers.",
+    step_2_title: "Consult with Bang Jaya",
+    step_2_desc: "Contact WhatsApp 0852-8344-8585 for itinerary & special offers.",
     step_3_title: "Enjoy Your Tour",
     step_3_desc: "Enjoy a memorable tour experience guided by professional Tour Leaders.",
 
@@ -283,7 +283,7 @@ export const TRANSLATIONS = {
 
     // Booking Modal
     modal_title: "SIAGA TOUR RESERVATION FORM",
-    modal_desc: "Fill in the reservation form below to connect directly with Mr. Tri Jaya Mulyana via WA +62 812-8322-9616.",
+    modal_desc: "Fill in the reservation form below to connect directly with Bang Jaya via WA 0852-8344-8585.",
     modal_summary_base: "Package / Fleet",
     modal_summary_total_days: "Duration",
     modal_field_name: "Customer Name / Institution",

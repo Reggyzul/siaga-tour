@@ -52,13 +52,13 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
               <strong>PT. SIAGA WISATA JAYA (Siaga Tour)</strong> adalah agen perjalanan wisata terpercaya yang berlokasi di <strong>Pejaten Barat, Pasar Minggu, Jakarta Selatan</strong>. Berpengalaman melayani rombongan tour sejak tahun <strong>2010</strong> dengan komitmen tinggi mengedepankan standar <strong>Pelayanan Prima &amp; Perjalanan Amanah</strong>.
             </p>
             <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Di bawah pimpinan <strong>Bpk. Tri Jaya Mulyana</strong>, kami hadir untuk memperkenalkan keindahan Indonesia — mulai dari wisata alam, sejarah, religi, edukasi, hingga petualangan — baik bagi wisatawan domestik maupun mancanegara.
+              Di bawah pimpinan <strong>Bang Jaya</strong>, kami hadir untuk memperkenalkan keindahan Indonesia — mulai dari wisata alam, sejarah, religi, edukasi, hingga petualangan — baik bagi wisatawan domestik maupun mancanegara.
             </p>
 
             <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white space-y-1 shadow-md border border-slate-700">
               <span className="text-[10px] font-extrabold uppercase text-sky-400 tracking-wider">SALAM PERSONA &amp; KONTAK</span>
               <p className="font-sans text-xs font-semibold text-slate-200">
-                "Salam dari Bpk. Tri Jaya Mulyana. Hubungi kami via WA 0852-8344-8585 untuk konsultasi itinerary &amp; penawaran terbaik."
+                "Salam dari Bang Jaya. Hubungi kami via WA 0852-8344-8585 untuk konsultasi itinerary &amp; penawaran terbaik."
               </p>
             </div>
           </div>

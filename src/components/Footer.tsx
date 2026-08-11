@@ -25,7 +25,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
               KONSULTASI TOUR 24 JAM
             </span>
             <h3 className="font-display font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">
-              Rencanakan Perjalanan Bersama Pak Tri Jaya Mulyana
+              Rencanakan Perjalanan Bersama Bang Jaya
             </h3>
             <p className="font-sans text-xs text-slate-300 font-medium max-w-xl leading-relaxed">
               Solusi paket wisata Study Tour, Wisata Religi, Outbound, Gathering &amp; Sewa Bus Pariwisata Terbaik &amp; Amanah.
@@ -72,7 +72,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
             <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1">
               <span className="text-[10px] font-extrabold text-sky-400 uppercase tracking-wider block">PERSONA &amp; SALAM</span>
               <p className="font-sans text-xs text-slate-300 italic">
-                "Salam hangat dari Tri Jaya Mulyana — Mengedepankan Pelayanan Prima &amp; Perjalanan Wisata Amanah."
+                "Salam hangat dari Bang Jaya — Mengedepankan Pelayanan Prima &amp; Perjalanan Wisata Amanah."
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                 <div>
                   <span className="font-bold text-white block">WhatsApp / Telepon:</span>
                   <a href="tel:085283448585" className="text-slate-300 hover:text-sky-400 font-bold block">
-                    0852-8344-8585 (Tri Jaya Mulyana)
+                    0852-8344-8585 (Bang Jaya)
                   </a>
                 </div>
               </div>

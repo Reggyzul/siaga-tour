@@ -74,9 +74,10 @@ export default function About({ lang }: AboutProps) {
                   <span className="text-slate-400">Komposisi Wisatawan:</span>
                   <span className="font-bold text-green-400">90% Domestik | 10% WNA</span>
                 </div>
-                <div className="flex justify-between py-1.5">
-                  <span className="text-slate-400">Kontak Persona:</span>
-                  <span className="font-bold text-amber-400">Tri Jaya Mulyana</span>
+                <div className="flex items-center gap-3">
+                  <span className="font-bold text-amber-400">Bang Jaya</span>
+                  <span className="text-slate-400">•</span>
+                  <span className="text-slate-300">PT. SIAGA WISATA JAYA</span>
                 </div>
               </div>
 
