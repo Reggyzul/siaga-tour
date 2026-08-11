@@ -172,7 +172,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '3 Hari',
     route: ['Semarang', 'Ungaran', 'Magelang'],
     routeDisplay: 'Semarang - Ungaran - Magelang',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=800',
+    image: '/tour_semarang.jpg',
     badge: 'Semarang Tour',
     minPrice: '(Start from Rp 1.200.000)',
     tiers: [
@@ -218,7 +218,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '3 Hari',
     route: ['Wonosobo', 'Dieng'],
     routeDisplay: 'Wonosobo - Dieng',
-    image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&q=80&w=800',
+    image: '/tour_dieng.jpg',
     badge: 'Negeri di Atas Awan',
     minPrice: '(Start from Rp 1.200.000)',
     tiers: [
@@ -264,7 +264,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '1 Hari (Pulang Pergi)',
     route: ['Bandung', 'Lembang'],
     routeDisplay: 'Lembang - Bandung',
-    image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&q=80&w=800',
+    image: '/tour_lembang.jpg',
     badge: 'One Day Tour',
     minPrice: '(Start from Rp 375.000)',
     tiers: [
@@ -302,7 +302,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '1 Hari (Pulang Pergi)',
     route: ['Kuningan', 'Jawa Barat'],
     routeDisplay: 'Kuningan - Jawa Barat',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+    image: '/tour_kuningan.jpg',
     badge: 'One Day Tour',
     minPrice: '(Start from Rp 350.000)',
     tiers: [
@@ -378,7 +378,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '1 Hari (Pulang Pergi)',
     route: ['Pangalengan', 'Sungai Palayangan'],
     routeDisplay: 'Pangalengan - Rafting Palayangan',
-    image: 'https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&fit=crop&q=80&w=800',
+    image: '/tour_pangalengan.jpg',
     badge: 'Petualangan Outbound',
     minPrice: '(Start from Rp 475.000)',
     tiers: [
