@@ -29,7 +29,7 @@ export default function HomePreviews({
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. KATALOG ARMADA UNGGULAN (TERMASUK AVANZA, INNOVA, HIACE, ELF, BUS) */}
+      {/* 1. KATALOG ARMADA UNGGULAN (FULL GAMBAR COVER BINGKAI SERAGAM UNTUK SEMUA ARMADA) */}
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-2">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
@@ -49,10 +49,10 @@ export default function HomePreviews({
           </p>
         </div>
 
-        {/* Fleet Grid: 5 Display Cards (Avanza, Innova, Hiace, Elf, Bus Pariwisata) */}
+        {/* Fleet Grid: 5 Display Cards (Full Frame Cover Image for All Cards) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6">
           
-          {/* Card 1: Toyota Avanza */}
+          {/* Card 1: Toyota Avanza (Full Cover Image Frame) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,12 +60,15 @@ export default function HomePreviews({
             className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
           >
             <div className="space-y-3">
-              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
-                <img src={avanza.image} alt={avanza.name} className="w-full h-auto object-contain max-h-[130px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
-                  {avanza.category}
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
+                <img src={avanza.image} alt={avanza.name} className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                
+                <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
+                  TOYOTA AVANZA
                 </div>
-                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs border border-slate-200">
                   <Users className="w-3 h-3 text-blue-600" />
                   <span>{avanza.seats} Kursi</span>
                 </div>
@@ -89,7 +92,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 2: Toyota Innova (KARTU INNOVA DITAMPILKAN DI LANDING PAGE) */}
+          {/* Card 2: Toyota Innova (Full Cover Image Frame) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,12 +101,15 @@ export default function HomePreviews({
             className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
           >
             <div className="space-y-3">
-              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
-                <img src={innova.image} alt={innova.name} className="w-full h-auto object-contain max-h-[130px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
-                  {innova.category}
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
+                <img src={innova.image} alt={innova.name} className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                
+                <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
+                  TOYOTA INNOVA
                 </div>
-                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs border border-slate-200">
                   <Users className="w-3 h-3 text-blue-600" />
                   <span>{innova.seats} Kursi</span>
                 </div>
@@ -127,7 +133,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 3: Toyota Hiace */}
+          {/* Card 3: Toyota Hiace (Full Cover Image Frame) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -182,7 +188,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 4: Isuzu Elf */}
+          {/* Card 4: Isuzu Elf (Full Cover Image Frame) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -237,7 +243,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 5: Bus Pariwisata */}
+          {/* Card 5: Bus Pariwisata (Full Cover Image Frame) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
