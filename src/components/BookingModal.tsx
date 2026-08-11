@@ -58,7 +58,7 @@ export default function BookingModal({ car, onClose, lang, onCarChange }: Bookin
     if (routeCategory === 'internasional') routeText = 'Tour Internasional';
     if (routeCategory === 'sewa_armada') routeText = 'Sewa Kendaraan / Bus Pariwisata';
 
-    const textTemplate = `Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya ingin berkonsultasi & reservasi tour:
+    const textTemplate = `Halo Siaga Tour, saya ingin berkonsultasi & reservasi tour:
 
 📋 *DETAIL RESERVASI TOUR:*
 • Kategori Tour: *${routeText}*

@@ -18,7 +18,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const waNumber = '6285283448585';
-    const message = `Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya ingin konsultasi paket wisata: ${destinationInput}${travelDateInput ? ` (Rencana Tanggal: ${travelDateInput})` : ''}. Mohon informasi ketersediaan & penawaran terbaik. Terima kasih!`;
+    const message = `Halo Siaga Tour, saya ingin konsultasi paket wisata: ${destinationInput}${travelDateInput ? ` (Rencana Tanggal: ${travelDateInput})` : ''}. Mohon informasi ketersediaan & penawaran terbaik. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 

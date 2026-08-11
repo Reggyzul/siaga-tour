@@ -49,7 +49,7 @@ export default function FleetTypeModal({ category, onClose, onSelectCar }: Fleet
 
   const handleWhatsAppBooking = (carName: string) => {
     const waNumber = '6285283448585';
-    const message = `Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya berminat sewa armada: ${carName}. Mohon informasi penawaran harga, jadwal & ketersediaan unit. Terima kasih!`;
+    const message = `Halo Siaga Tour, saya berminat sewa armada: ${carName}. Mohon informasi penawaran harga, jadwal & ketersediaan unit. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 

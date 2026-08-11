@@ -106,7 +106,7 @@ export default function App() {
 
   const handleFloatingWA = () => {
     const waNumber = '6285283448585';
-    const text = encodeURIComponent('Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya ingin berkonsultasi mengenai paket tour & sewa kendaraan. Mohon bantuannya.');
+    const text = encodeURIComponent('Halo Siaga Tour, saya ingin berkonsultasi mengenai paket tour & sewa kendaraan. Mohon bantuannya.');
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${text}`, '_blank', 'noreferrer');
   };
 
