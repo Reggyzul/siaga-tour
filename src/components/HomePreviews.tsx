@@ -28,8 +28,8 @@ export default function HomePreviews({
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. KATALOG ARMADA UNGGULAN (WHITE CARD THEMING) */}
-      <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+      {/* 1. KATALOG ARMADA UNGGULAN (DITAMPILKAN SELURUHNYA DI LANDING PAGE) */}
+      <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-2">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 font-display font-extrabold text-xs tracking-wider uppercase">
@@ -44,11 +44,11 @@ export default function HomePreviews({
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Tersedia pilihan sewa Toyota Avanza/Innova, **Toyota Hiace**, **Isuzu Elf**, serta **Bus Pariwisata**.
+            Layanan sewa kendaraan prima &amp; profesional untuk perjalanan wisata, study tour, gathering kantor, serta dinas keluarga.
           </p>
         </div>
 
-        {/* Fleet Grid: 4 Cards (Clean White Theme) */}
+        {/* Fleet Grid: 4 Cards (Toyota Hiace, Isuzu Elf, Bus Pariwisata, Avanza/Innova) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
           
           {/* Card 1: Avanza & Innova MPV */}
@@ -88,7 +88,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 2: SEMUA TOYOTA HIACE (WHITE CARD) */}
+          {/* Card 2: TOYOTA HIACE (TANPA TULISAN "SEMUA") */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export default function HomePreviews({
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
-                <img src="/hiace_premio.avif" alt="Semua Toyota Hiace" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <img src="/hiace_premio.avif" alt="Toyota Hiace" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
@@ -114,7 +114,7 @@ export default function HomePreviews({
 
               <div>
                 <h3 className="font-display font-black text-base text-slate-900 tracking-tight">
-                  Semua Toyota Hiace
+                  Toyota Hiace
                 </h3>
                 <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">
                   Hiace Premio 14 Seat, Premio Luxury VIP, Commuter 14 Seat &amp; Luxury Seat.
@@ -143,7 +143,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 3: SEMUA ISUZU ELF (WHITE CARD) */}
+          {/* Card 3: ISUZU ELF (TANPA TULISAN "SEMUA") */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ export default function HomePreviews({
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
-                <img src="/elf_long.avif" alt="Semua Armada Isuzu Elf" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <img src="/elf_long.avif" alt="Isuzu Elf" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
@@ -169,7 +169,7 @@ export default function HomePreviews({
 
               <div>
                 <h3 className="font-display font-black text-base text-slate-900 tracking-tight">
-                  Semua Isuzu Elf
+                  Isuzu Elf
                 </h3>
                 <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">
                   Elf Long 19 Seat, Elf Luxury 10 Seat, Elf Jumbo/Coaster 18 Seat &amp; Elf Grandtour.
@@ -198,7 +198,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 4: SEMUA BUS PARIWISATA (WHITE CARD) */}
+          {/* Card 4: BUS PARIWISATA (TANPA TULISAN "SEMUA") */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -209,7 +209,7 @@ export default function HomePreviews({
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
-                <img src="/miyor.avif" alt="Semua Armada Bus Pariwisata" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <img src="/miyor.avif" alt="Bus Pariwisata" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                 
                 <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
@@ -224,7 +224,7 @@ export default function HomePreviews({
 
               <div>
                 <h3 className="font-display font-black text-base text-slate-900 tracking-tight">
-                  Semua Bus Pariwisata
+                  Bus Pariwisata
                 </h3>
                 <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">
                   Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus VIP, Medium Bus Standard &amp; Motorhome.
@@ -255,16 +255,6 @@ export default function HomePreviews({
 
         </div>
 
-        {/* Action Button: Selengkapnya (Halaman Armada) */}
-        <div className="text-center pt-10">
-          <button
-            onClick={onNavigateToRentals}
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-display font-black text-xs sm:text-sm uppercase rounded-2xl shadow-lg shadow-blue-600/30 transition-all hover:scale-105 cursor-pointer tracking-wider"
-          >
-            <span>Selengkapnya</span>
-            <ChevronDown className="w-4 h-4 animate-bounce" />
-          </button>
-        </div>
       </section>
 
       {/* 2. PREVIEW 6 PAKET TOUR */}

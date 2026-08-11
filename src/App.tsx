@@ -61,9 +61,12 @@ export default function App() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('about');
     } else if (sectionId === 'cars' || sectionId === 'rentals' || sectionId === 'transport-rent') {
-      setCurrentPage('rentals');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('rentals');
+      setCurrentPage('home');
+      setTimeout(() => {
+        const el = document.getElementById('cars-preview');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      setActiveSection('cars');
     } else if (sectionId === 'package-tour-page' || sectionId === 'package-tour' || sectionId === 'packages') {
       setCurrentPage('package-tour');
       window.scrollTo({ top: 0, behavior: 'smooth' });

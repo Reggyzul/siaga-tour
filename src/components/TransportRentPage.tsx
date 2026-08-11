@@ -64,14 +64,14 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
           </h2>
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Siaga Tour menyediakan bingkai khusus **Semua Bus**, **Semua Elf**, dan **Semua Hiace** yang menampilkan rincian beragam tipenya melalui pop-up modal.
+            Layanan sewa kendaraan prima &amp; profesional untuk perjalanan wisata, study tour, gathering kantor, serta dinas keluarga.
           </p>
         </div>
 
         {/* 4 CATEGORY / FLEET CARDS GRID (WHITE CARD THEMING) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          {/* CARD 1: SEMUA BUS PARIWISATA (WHITE CARD) */}
+          {/* CARD 1: BUS PARIWISATA (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                 <img
                   src="/miyor.avif"
-                  alt="Semua Armada Bus Pariwisata"
+                  alt="Bus Pariwisata"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -99,7 +99,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
 
                 <div className="absolute bottom-3 left-3 right-3 space-y-1">
                   <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-sky-300 transition-colors uppercase">
-                    Semua Bus Pariwisata
+                    Bus Pariwisata
                   </h3>
                   <div className="w-16 h-1 bg-blue-500 rounded-full group-hover:w-28 transition-all duration-500" />
                 </div>
@@ -145,7 +145,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
             </div>
           </motion.div>
 
-          {/* CARD 2: SEMUA ISUZU ELF (WHITE CARD) */}
+          {/* CARD 2: ISUZU ELF (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -158,7 +158,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                 <img
                   src="/elf_long.avif"
-                  alt="Semua Armada Isuzu Elf"
+                  alt="Isuzu Elf"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -174,7 +174,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
 
                 <div className="absolute bottom-3 left-3 right-3 space-y-1">
                   <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-sky-300 transition-colors uppercase">
-                    Semua Isuzu Elf
+                    Isuzu Elf
                   </h3>
                   <div className="w-16 h-1 bg-blue-500 rounded-full group-hover:w-28 transition-all duration-500" />
                 </div>
@@ -220,7 +220,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
             </div>
           </motion.div>
 
-          {/* CARD 3: SEMUA TOYOTA HIACE (WHITE CARD) */}
+          {/* CARD 3: TOYOTA HIACE (WHITE CARD) */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +233,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
               <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                 <img
                   src="/hiace_premio.avif"
-                  alt="Semua Toyota Hiace"
+                  alt="Toyota Hiace"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
@@ -249,7 +249,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
 
                 <div className="absolute bottom-3 left-3 right-3 space-y-1">
                   <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-sky-300 transition-colors uppercase">
-                    Semua Toyota Hiace
+                    Toyota Hiace
                   </h3>
                   <div className="w-16 h-1 bg-blue-500 rounded-full group-hover:w-28 transition-all duration-500" />
                 </div>
