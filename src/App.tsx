@@ -104,8 +104,8 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleWhatsAppChat = () => {
-    const waNumber = '6281283229616';
+  const handleFloatingWA = () => {
+    const waNumber = '6285283448585';
     const text = encodeURIComponent('Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya ingin berkonsultasi mengenai paket tour & sewa kendaraan. Mohon bantuannya.');
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${text}`, '_blank', 'noreferrer');
   };

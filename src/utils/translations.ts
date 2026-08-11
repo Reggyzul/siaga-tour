@@ -12,7 +12,7 @@ export const TRANSLATIONS = {
 
     // Top Bar
     topbar_address: "Lokasi: Pejaten Barat, Pasar Minggu, Jakarta Selatan | Buka 24 Jam",
-    topbar_whatsapp: "Konsultasi Tour WA (Tri Jaya Mulyana): 0812-8322-9616",
+    topbar_whatsapp: "Konsultasi Tour WA (Tri Jaya Mulyana): 0852-8344-8585",
     topbar_service: "Pengalaman Sejak 2010 | PT. SIAGA WISATA JAYA",
 
     // Hero Section
@@ -63,7 +63,7 @@ export const TRANSLATIONS = {
     pkg_modal_includes: "Fasilitas Termasuk (Include)",
     pkg_modal_excludes: "Tidak Termasuk (Exclude)",
     pkg_modal_selected: "Opsi Terpilih",
-    pkg_modal_wa_btn: "Pesan via WhatsApp 0812-8322-9616",
+    pkg_modal_wa_btn: "Pesan via WhatsApp 0852-8344-8585",
 
     // About Section (Visi & Misi)
     about_tag: "PROFIL PERUSAHAAN & VISI MISI",
@@ -110,7 +110,7 @@ export const TRANSLATIONS = {
     cars_transmission_manual: "Manual",
     cars_included_label: "Fasilitas & Layanan:",
     cars_driver_friendly: "Driver Berpengalaman & Kru Ramah",
-    cars_book_btn: "Konsultasi WA 0812-8322-9616",
+    cars_book_btn: "Konsultasi WA 0852-8344-8585",
 
     // Steps
     steps_tag: "CARA PEMESANAN PRAKTIS",
@@ -119,7 +119,7 @@ export const TRANSLATIONS = {
     step_1_title: "Pilih Paket & Armada",
     step_1_desc: "Tentukan rute wisata (Bali, Bromo, Jogja, Dieng, Lembang, Anyer, dll) dan armada sesuai kebutuhan.",
     step_2_title: "Konsultasi dengan Pak Tri Jaya",
-    step_2_desc: "Hubungi WhatsApp 0812-8322-9616 untuk penyusunan itinerary, penawaran khusus & skema pembayaran.",
+    step_2_desc: "Hubungi WhatsApp 0852-8344-8585 untuk penyusunan itinerary, penawaran khusus & skema pembayaran.",
     step_3_title: "Nikmati Tour Prima & Amanah",
     step_3_desc: "Nikmati pengalaman wisata berkesan didampingi Tour Leader & driver profesional.",
 
@@ -134,7 +134,7 @@ export const TRANSLATIONS = {
 
     // Booking Modal
     modal_title: "FORM RESERVASI SIAGA TOUR",
-    modal_desc: "Lengkapi draf reservasi di bawah ini untuk terhubung langsung dengan Bpk. Tri Jaya Mulyana via WA 0812-8322-9616.",
+    modal_desc: "Lengkapi draf reservasi di bawah ini untuk terhubung langsung dengan Bpk. Tri Jaya Mulyana via WA 0852-8344-8585.",
     modal_summary_base: "Paket / Armada",
     modal_summary_total_days: "Durasi Perjalanan",
     modal_field_name: "Nama Pemesan / Instansi",

@@ -48,7 +48,7 @@ export default function FleetTypeModal({ category, onClose, onSelectCar }: Fleet
   const info = getTitleInfo();
 
   const handleWhatsAppBooking = (carName: string) => {
-    const waNumber = '6281283229616';
+    const waNumber = '6285283448585';
     const message = `Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya berminat sewa armada: ${carName}. Mohon informasi penawaran harga, jadwal & ketersediaan unit. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
@@ -228,7 +228,7 @@ export default function FleetTypeModal({ category, onClose, onSelectCar }: Fleet
           <div className="p-4 bg-slate-900 text-white flex items-center justify-between border-t border-slate-800 shrink-0 z-20">
             <div className="text-xs">
               <span className="text-slate-400 block font-medium">Konsultasi ketersediaan armada?</span>
-              <span className="font-bold text-white">Layanan Siaga Tour WA: 0812-8322-9616</span>
+              <span className="font-bold text-white">Layanan Siaga Tour WA: 0852-8344-8585</span>
             </div>
             <button
               onClick={onClose}

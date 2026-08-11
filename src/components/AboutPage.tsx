@@ -58,7 +58,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             <div className="p-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white space-y-1 shadow-md border border-slate-700">
               <span className="text-[10px] font-extrabold uppercase text-sky-400 tracking-wider">SALAM PERSONA &amp; KONTAK</span>
               <p className="font-sans text-xs font-semibold text-slate-200">
-                "Salam dari Bpk. Tri Jaya Mulyana. Hubungi kami via WA 0812-8322-9616 untuk konsultasi itinerary &amp; penawaran terbaik."
+                "Salam dari Bpk. Tri Jaya Mulyana. Hubungi kami via WA 0852-8344-8585 untuk konsultasi itinerary &amp; penawaran terbaik."
               </p>
             </div>
           </div>

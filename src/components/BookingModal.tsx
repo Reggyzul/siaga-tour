@@ -51,7 +51,7 @@ export default function BookingModal({ car, onClose, lang, onCarChange }: Bookin
       return;
     }
 
-    const waNumber = '6281283229616';
+    const waNumber = '6285283448585';
 
     let routeText = 'Tour Wisata Domestic';
     if (routeCategory === 'out_sumbar') routeText = 'Tour Wisata Nusantara';
@@ -313,7 +313,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                           required
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          placeholder="Contoh: 081283229616"
+                          placeholder="Contoh: 085283448585"
                           className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-600 text-xs font-sans text-slate-900"
                         />
                       </div>

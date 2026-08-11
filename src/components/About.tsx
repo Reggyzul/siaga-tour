@@ -84,7 +84,7 @@ export default function About({ lang }: AboutProps) {
 
             <div className="pt-6 mt-6 border-t border-slate-800 text-center">
               <span className="font-display font-extrabold text-xs text-red-400 tracking-wider uppercase block">
-                WA: 0812-8322-9616 | Pejaten Barat, Jakarta Selatan
+                WA: 0852-8344-8585 | Pejaten Barat, Jakarta Selatan
               </span>
             </div>
           </motion.div>

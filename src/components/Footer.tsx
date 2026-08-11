@@ -33,13 +33,13 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
           </div>
           <div className="md:col-span-4 flex justify-start md:justify-end">
             <a
-              href="https://api.whatsapp.com/send?phone=6281283229616&text=Halo%20Pak%20Tri%20Jaya%20Mulyana%20(PT.%20SIAGA%20WISATA%20JAYA),%20saya%20ingin%20konsultasi%20paket%20tour%20dan%20sewa%20armada"
+              href="https://api.whatsapp.com/send?phone=6285283448585&text=Halo%20Pak%20Tri%20Jaya%20Mulyana%20(PT.%20SIAGA%20WISATA%20JAYA),%20saya%20ingin%20konsultasi%20paket%20tour%20dan%20sewa%20armada"
               target="_blank"
               rel="noreferrer"
               className="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white font-sans font-bold text-xs uppercase px-7 py-4 rounded-full shadow-lg shadow-blue-600/25 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
-              <span>WhatsApp: 0812-8322-9616</span>
+              <span>WhatsApp: 0852-8344-8585</span>
             </a>
           </div>
         </div>
@@ -98,8 +98,8 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                 <Phone className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold text-white block">WhatsApp / Telepon:</span>
-                  <a href="tel:081283229616" className="text-slate-300 hover:text-sky-400 font-bold block">
-                    0812-8322-9616 (Tri Jaya Mulyana)
+                  <a href="tel:085283448585" className="text-slate-300 hover:text-sky-400 font-bold block">
+                    0852-8344-8585 (Tri Jaya Mulyana)
                   </a>
                 </div>
               </div>

@@ -20,7 +20,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
   const mpvCars = CARS.filter(c => c.category === 'Mini Bus');
 
   const handleWhatsAppBooking = (carName: string) => {
-    const waNumber = '6281283229616';
+    const waNumber = '6285283448585';
     const message = `Halo Pak Tri Jaya Mulyana (PT. SIAGA WISATA JAYA), saya berminat sewa armada: ${carName}. Mohon informasi penawaran harga, jadwal & ketersediaan unit. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
