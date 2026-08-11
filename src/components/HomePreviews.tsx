@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { CARS } from '../data/cars';
 import { TOUR_PACKAGES } from '../data/packages';
 import { Car } from '../types';
-import { Users, Calendar, ArrowRight, ChevronDown, Sparkles, MapPin, Bus, ShieldCheck } from 'lucide-react';
+import { Users, Calendar, ArrowRight, ChevronDown, Sparkles, Bus, Layers, ShieldCheck } from 'lucide-react';
+import BusElfModal from './BusElfModal';
 
 interface HomePreviewsProps {
   onNavigateToRentals: () => void;
@@ -18,13 +19,18 @@ export default function HomePreviews({
   onSelectCar,
   lang
 }: HomePreviewsProps) {
-  const displayedCars = CARS.slice(0, 6);
+  const [isBusElfModalOpen, setIsBusElfModalOpen] = useState(false);
+
+  // Get specific car items for display
+  const avanza = CARS.find(c => c.id === 'avanza') || CARS[0];
+  const innova = CARS.find(c => c.id === 'innova') || CARS[1];
+  const hiace = CARS.find(c => c.id === 'hiace-premio-14') || CARS[2];
   const displayedPackages = TOUR_PACKAGES.slice(0, 6);
 
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. PREVIEW 6 ARMADA KENDARAAN (SEWA ARMADA) */}
+      {/* 1. KATALOG ARMADA UNGGULAN (DENGAN BINGKAI GABUNGAN BUS & ELF) */}
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
@@ -40,68 +46,191 @@ export default function HomePreviews({
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Tersedia pilihan sewa Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus, Hiace Premio &amp; Commuter, Elf Long, hingga Toyota Avanza &amp; Innova.
+            Tersedia pilihan sewa Toyota Avanza, Toyota Innova, Toyota Hiace, serta **Bingkai Gabungan Armada Bus &amp; Elf Pariwisata**.
           </p>
         </div>
 
-        {/* 6 Cars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {displayedCars.map((car, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
-              key={car.id}
-              className="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-            >
-              <div className="space-y-4">
-                {/* Image Box */}
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
-                  <img
-                    src={car.image}
-                    alt={car.name}
-                    className="w-full h-auto object-contain max-h-[160px] drop-shadow-md group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-xs">
-                    {car.category}
-                  </div>
-                  <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-xs">
-                    <Users className="w-3.5 h-3.5 text-blue-600" />
-                    <span>{car.seats} Kursi</span>
-                  </div>
+        {/* Fleet Grid: 4 Display Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
+          
+          {/* Card 1: Avanza */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+          >
+            <div className="space-y-3">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
+                <img src={avanza.image} alt={avanza.name} className="w-full h-auto object-contain max-h-[140px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
+                  {avanza.category}
                 </div>
-
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+                  <Users className="w-3 h-3 text-blue-600" />
+                  <span>{avanza.seats} Kursi</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">{avanza.name}</h3>
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">{avanza.description}</p>
+              </div>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <h3 className="font-display font-black text-lg text-slate-900 tracking-tight">
-                    {car.name}
-                  </h3>
-                  <p className="text-xs text-slate-500 font-medium line-clamp-2 mt-1">
-                    {car.description}
-                  </p>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                  <span className="font-display font-black text-sm text-blue-600">{avanza.priceDisplay}</span>
+                </div>
+              </div>
+            </div>
+            <div className="pt-3">
+              <button onClick={() => onSelectCar(avanza)} className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>Pesan Armada</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Card 2: Innova */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08 }}
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+          >
+            <div className="space-y-3">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
+                <img src={innova.image} alt={innova.name} className="w-full h-auto object-contain max-h-[140px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
+                  {innova.category}
+                </div>
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+                  <Users className="w-3 h-3 text-blue-600" />
+                  <span>{innova.seats} Kursi</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">{innova.name}</h3>
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">{innova.description}</p>
+              </div>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                  <span className="font-display font-black text-sm text-blue-600">{innova.priceDisplay}</span>
+                </div>
+              </div>
+            </div>
+            <div className="pt-3">
+              <button onClick={() => onSelectCar(innova)} className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>Pesan Armada</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Card 3: Hiace */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.16 }}
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+          >
+            <div className="space-y-3">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
+                <img src={hiace.image} alt={hiace.name} className="w-full h-auto object-contain max-h-[140px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
+                  {hiace.category}
+                </div>
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+                  <Users className="w-3 h-3 text-blue-600" />
+                  <span>{hiace.seats} Kursi</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">{hiace.name}</h3>
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">{hiace.description}</p>
+              </div>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                  <span className="font-display font-black text-sm text-blue-600">{hiace.priceDisplay}</span>
+                </div>
+              </div>
+            </div>
+            <div className="pt-3">
+              <button onClick={() => onSelectCar(hiace)} className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>Pesan Armada</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Card 4: COMBINED BUS & ELF FRAME CARD */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.24 }}
+            onClick={() => setIsBusElfModalOpen(true)}
+            className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-2 border-blue-500 rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-white"
+          >
+            <div className="space-y-3">
+              {/* Photo Header */}
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
+                <img src="/miyor.avif" alt="Armada Bus & Elf Pariwisata" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                
+                <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
+                  GABUNGAN BUS &amp; ELF
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                    <span className="font-display font-black text-base text-blue-600">
-                      {car.priceDisplay}
-                    </span>
-                  </div>
+                <div className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                  <Users className="w-3 h-3 text-blue-600" />
+                  <span>10 - 59 Kursi</span>
+                </div>
+
+                <div className="absolute bottom-2 left-2.5 right-2.5 text-white">
+                  <span className="text-[10px] font-extrabold uppercase text-sky-300 block tracking-wider">
+                    9 VARIANT TIPE BUS &amp; ELF
+                  </span>
                 </div>
               </div>
 
-              <div className="pt-4">
-                <button
-                  onClick={() => onSelectCar(car)}
-                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>Pesan Armada</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+              <div>
+                <h3 className="font-display font-black text-base text-white tracking-tight uppercase group-hover:text-sky-300 transition-colors">
+                  Armada Bus &amp; Elf Pariwisata
+                </h3>
+                <p className="text-[11px] text-slate-300 font-medium line-clamp-2 mt-1">
+                  Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus, Elf Long 19 Seat &amp; Motorhome Luxury.
+                </p>
               </div>
-            </motion.div>
-          ))}
+
+              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
+                <div>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                  <span className="font-display font-black text-sm text-sky-300">Start Rp 1.100.000</span>
+                </div>
+                <span className="text-[9px] font-extrabold text-blue-400 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-700/60">
+                  Lihat Detail Pop-up ➔
+                </span>
+              </div>
+            </div>
+
+            <div className="pt-3">
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsBusElfModalOpen(true);
+                }} 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <span>Lihat Detail Tipe</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </motion.div>
+
         </div>
 
         {/* Action Button: Selengkapnya (Halaman Armada) */}
@@ -226,6 +355,13 @@ export default function HomePreviews({
           </button>
         </div>
       </section>
+
+      {/* POPUP MODAL FOR COMBINED BUS & ELF (TEXT ONLY, NO IMAGES IN POPUP) */}
+      <BusElfModal
+        isOpen={isBusElfModalOpen}
+        onClose={() => setIsBusElfModalOpen(false)}
+        onSelectCar={onSelectCar}
+      />
 
     </div>
   );
