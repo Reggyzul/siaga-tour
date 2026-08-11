@@ -1,22 +1,51 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Users, CheckCircle2, MessageCircle, Bus, ShieldCheck, Tag } from 'lucide-react';
+import { X, Users, CheckCircle2, MessageCircle, Bus, ShieldCheck } from 'lucide-react';
 import { CARS } from '../data/cars';
 import { Car } from '../types';
 
-interface BusElfModalProps {
-  isOpen: boolean;
+export type FleetTypeCategory = 'bus' | 'elf' | 'hiace';
+
+interface FleetTypeModalProps {
+  category: FleetTypeCategory | null;
   onClose: () => void;
   onSelectCar: (car: Car) => void;
 }
 
-export default function BusElfModal({ isOpen, onClose, onSelectCar }: BusElfModalProps) {
-  if (!isOpen) return null;
+export default function FleetTypeModal({ category, onClose, onSelectCar }: FleetTypeModalProps) {
+  if (!category) return null;
 
-  // Filter all Elf and Bus variants
-  const busElfCars = CARS.filter(car => 
-    car.category.includes('Bus') || car.category.includes('Elf') || car.id.includes('elf') || car.id.includes('bus')
-  );
+  // Filter cars based on chosen category
+  const filteredCars = CARS.filter(car => {
+    if (category === 'bus') return car.category.includes('Bus') || car.id.includes('bus');
+    if (category === 'elf') return car.category.includes('Elf') || car.id.includes('elf');
+    if (category === 'hiace') return car.category === 'Hiace' || car.id.includes('hiace');
+    return false;
+  });
+
+  const getTitleInfo = () => {
+    if (category === 'bus') {
+      return {
+        badge: 'ARMADA BUS PARIWISATA',
+        title: 'Pilihan Tipe Armada Bus Pariwisata',
+        subtitle: 'Terdiri dari Big Bus VIP Legrest (30 Seat), Big Bus Eksekutif (40-59 Seat), Medium Bus Legrest VIP (18 Seat), Medium Bus (29-35 Seat) & Motorhome Suite.'
+      };
+    }
+    if (category === 'elf') {
+      return {
+        badge: 'ARMADA ISUZU ELF',
+        title: 'Pilihan Tipe Armada Isuzu Elf',
+        subtitle: 'Terdiri dari Isuzu Elf Long (19 Seat), Elf Luxury (10 Seat), Elf Jumbo / Coaster (18 Seat) & Elf Grandtour (18 Seat).'
+      };
+    }
+    return {
+      badge: 'TOYOTA HIACE',
+      title: 'Pilihan Tipe Armada Toyota Hiace',
+      subtitle: 'Terdiri dari Toyota Hiace Premio 14 Seat, Hiace Premio Luxury VIP, Hiace Commuter 14 Seat & Hiace Commuter Luxury Seat.'
+    };
+  };
+
+  const info = getTitleInfo();
 
   const handleWhatsAppBooking = (carName: string) => {
     const waNumber = '6281283229616';
@@ -57,21 +86,21 @@ export default function BusElfModal({ isOpen, onClose, onSelectCar }: BusElfModa
             <div className="space-y-1.5 pr-14">
               <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-blue-600/30 border border-blue-400/30 text-sky-300 text-[10px] font-extrabold uppercase tracking-widest">
                 <Bus className="w-3.5 h-3.5" />
-                <span>KATALOG PILIHAN TIPE BUS &amp; ELF ({busElfCars.length} VARIANT)</span>
+                <span>{info.badge} ({filteredCars.length} VARIANT)</span>
               </div>
               <h2 className="font-display font-black text-xl sm:text-3xl uppercase tracking-tight text-white leading-tight">
-                Pilihan Tipe Armada Bus &amp; Elf Pariwisata
+                {info.title}
               </h2>
               <p className="font-sans text-xs text-slate-300 font-medium leading-relaxed">
-                Tersedia beragam pilihan Big Bus VIP Legrest, Big Bus Eksekutif, Medium Bus, Elf Long 19 Seat, Coaster &amp; Bus Luxury Motorhome.
+                {info.subtitle}
               </p>
             </div>
           </div>
 
-          {/* Modal Scrollable Body - STRICTLY NO IMAGES AS REQUESTED */}
+          {/* Modal Scrollable Body - STRICTLY TEXT ONLY (NO IMAGES) */}
           <div className="p-4 sm:p-6 overflow-y-auto space-y-4 flex-1 bg-slate-50">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {busElfCars.map((car) => (
+              {filteredCars.map((car) => (
                 <div
                   key={car.id}
                   className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-3 group hover:border-blue-300"
@@ -155,7 +184,7 @@ export default function BusElfModal({ isOpen, onClose, onSelectCar }: BusElfModa
           {/* Modal Footer */}
           <div className="p-4 bg-slate-900 text-white flex items-center justify-between border-t border-slate-800 shrink-0 z-20">
             <div className="text-xs">
-              <span className="text-slate-400 block font-medium">Konsultasi ketersediaan Bus &amp; Elf?</span>
+              <span className="text-slate-400 block font-medium">Konsultasi ketersediaan armada?</span>
               <span className="font-bold text-white">Layanan Siaga Tour WA: 0812-8322-9616</span>
             </div>
             <button
