@@ -17,7 +17,7 @@ export default function FleetTypeModal({ category, onClose, onSelectCar }: Fleet
 
   // Filter cars based on chosen category
   const filteredCars = CARS.filter(car => {
-    if (category === 'bus') return car.category.includes('Bus') || car.id.includes('bus');
+    if (category === 'bus') return (car.category === 'Bus Pariwisata' || car.id.includes('bus')) && car.category !== 'Mini Bus' && car.id !== 'avanza' && car.id !== 'innova';
     if (category === 'elf') return car.category.includes('Elf') || car.id.includes('elf');
     if (category === 'hiace') return car.category === 'Hiace' || car.id.includes('hiace');
     return false;
