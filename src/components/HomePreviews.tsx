@@ -23,12 +23,13 @@ export default function HomePreviews({
 
   // Get specific car items for display
   const avanza = CARS.find(c => c.id === 'avanza') || CARS[0];
+  const innova = CARS.find(c => c.id === 'innova') || CARS[1];
   const displayedPackages = TOUR_PACKAGES.slice(0, 6);
 
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. KATALOG ARMADA UNGGULAN (DITAMPILKAN SELURUHNYA DI LANDING PAGE) */}
+      {/* 1. KATALOG ARMADA UNGGULAN (TERMASUK AVANZA, INNOVA, HIACE, ELF, BUS) */}
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-2">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
@@ -48,10 +49,10 @@ export default function HomePreviews({
           </p>
         </div>
 
-        {/* Fleet Grid: 4 Cards (Toyota Hiace, Isuzu Elf, Bus Pariwisata, Avanza/Innova) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
+        {/* Fleet Grid: 5 Display Cards (Avanza, Innova, Hiace, Elf, Bus Pariwisata) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6">
           
-          {/* Card 1: Avanza & Innova MPV */}
+          {/* Card 1: Toyota Avanza */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +61,7 @@ export default function HomePreviews({
           >
             <div className="space-y-3">
               <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
-                <img src={avanza.image} alt={avanza.name} className="w-full h-auto object-contain max-h-[140px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+                <img src={avanza.image} alt={avanza.name} className="w-full h-auto object-contain max-h-[130px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
                   {avanza.category}
                 </div>
@@ -88,12 +89,50 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 2: TOYOTA HIACE (TANPA TULISAN "SEMUA") */}
+          {/* Card 2: Toyota Innova (KARTU INNOVA DITAMPILKAN DI LANDING PAGE) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.08 }}
+            transition={{ delay: 0.06 }}
+            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
+          >
+            <div className="space-y-3">
+              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
+                <img src={innova.image} alt={innova.name} className="w-full h-auto object-contain max-h-[130px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
+                  {innova.category}
+                </div>
+                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+                  <Users className="w-3 h-3 text-blue-600" />
+                  <span>{innova.seats} Kursi</span>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">{innova.name}</h3>
+                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">{innova.description}</p>
+              </div>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                  <span className="font-display font-black text-sm text-blue-600">{innova.priceDisplay}</span>
+                </div>
+              </div>
+            </div>
+            <div className="pt-3">
+              <button onClick={() => onSelectCar(innova)} className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>Pesan Armada</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Card 3: Toyota Hiace */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.12 }}
             onClick={() => setActiveModalCategory('hiace')}
             className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left"
           >
@@ -143,12 +182,12 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 3: ISUZU ELF (TANPA TULISAN "SEMUA") */}
+          {/* Card 4: Isuzu Elf */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.16 }}
+            transition={{ delay: 0.18 }}
             onClick={() => setActiveModalCategory('elf')}
             className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left"
           >
@@ -198,7 +237,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 4: BUS PARIWISATA (TANPA TULISAN "SEMUA") */}
+          {/* Card 5: Bus Pariwisata */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
