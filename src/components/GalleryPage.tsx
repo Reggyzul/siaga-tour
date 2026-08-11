@@ -20,7 +20,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       subtitle: 'Kuningan West Java (Telaga Cicerem & Arunika)',
       location: 'Kuningan, Jawa Barat',
       image: '/gallery_sma46_kuningan.jpg',
-      badge: 'Fun Day Trip'
+      badge: 'School Tour'
     },
     {
       id: 2,
@@ -34,9 +34,9 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       id: 3,
       title: 'Gathering HAIRCODE AEON BSD',
       subtitle: 'Villa Shinta Corner & Rafting Pangalengan',
-      location: 'Pangalengan, Bandung Selatan',
+      location: 'Pangalengan, Bandung',
       image: '/gallery_haircode_pangalengan.jpg',
-      badge: 'Outbound Gathering'
+      badge: 'Corporate Gathering'
     },
     {
       id: 4,
@@ -53,6 +53,46 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       location: 'Masjid Raya Sheikh Zayed, Surakarta',
       image: '/gallery_masjid_zayed.jpg',
       badge: 'Wisata Religi'
+    },
+    {
+      id: 6,
+      title: 'Rahayu River Tubing Kebumen',
+      subtitle: 'Petualangan Wisata Air Tubing Sungai Rahayu Kebumen',
+      location: 'Padureso, Kebumen',
+      image: '/gallery_rahayu_tubing.jpg',
+      badge: 'River Tubing'
+    },
+    {
+      id: 7,
+      title: 'Rihlah Musholla Al-Huda Jakarta',
+      subtitle: 'Rombongan Ziarah & Wisata Bersama Big Bus Bagong',
+      location: 'Pejaten Timur, Jakarta',
+      image: '/gallery_rihlah_alhuda.jpg',
+      badge: 'Rihlah & Bus Tour'
+    },
+    {
+      id: 8,
+      title: 'Rafting Cisadane KKCPN Jakarta Utara',
+      subtitle: 'Outbound & Arung Jeram Sungai Cisadane Bogor',
+      location: 'Sungai Cisadane, Bogor',
+      image: '/gallery_rafting_cisadane.jpg',
+      badge: 'Outbound Rafting'
+    },
+    {
+      id: 9,
+      title: 'Gathering SDN Lenteng Agung 01',
+      subtitle: 'Watu Angkruk Serambi Dieng Plateau',
+      location: 'Dieng Plateau, Wonosobo',
+      image: '/gallery_sdn_lenteng_dieng.jpg',
+      badge: 'School Gathering'
+    },
+    {
+      id: 10,
+      title: 'Open Trip Bromo - Semeru',
+      subtitle: 'Eksplorasi Pesona Gunung Bromo & Semeru',
+      location: 'Taman Nasional Bromo Tengger Semeru',
+      image: '/gallery_bromo_semeru.jpg',
+      badge: 'Bromo Semeru'
     }
   ];
 
@@ -72,7 +112,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-3">
           <div className="inline-flex items-center gap-2 bg-blue-600/30 border border-blue-400/40 px-3.5 py-1 rounded-full text-sky-300 text-xs font-bold uppercase tracking-widest">
             <Camera className="w-4 h-4 text-sky-400" />
-            <span>GALERI DOKUMENTASI RESMI</span>
+            <span>GALERI DOKUMENTASI RESMI SIAGA TOUR</span>
           </div>
 
           <h1 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white drop-shadow-md">
@@ -110,7 +150,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               key={item.id}
               onClick={() => setSelectedPhoto(item)}
               className="group relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-end aspect-[4/3]"

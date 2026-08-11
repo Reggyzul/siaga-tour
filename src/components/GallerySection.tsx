@@ -8,7 +8,7 @@ interface GallerySectionProps {
 }
 
 export default function GallerySection({ lang }: GallerySectionProps) {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'gathering' | 'destinasi'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'gathering' | 'destinasi' | 'religi'>('all');
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
   const t = TRANSLATIONS[lang];
@@ -20,7 +20,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
       title: 'Fun Day Trip SMA 46 Jakarta',
       subtitle: 'Kuningan West Java (Telaga Cicerem & Arunika)',
       location: 'Kuningan, Jawa Barat',
-      badge: 'Fun Day Trip',
+      badge: 'School Tour',
       image: '/gallery_sma46_kuningan.jpg'
     },
     {
@@ -37,8 +37,8 @@ export default function GallerySection({ lang }: GallerySectionProps) {
       category: 'gathering',
       title: 'Gathering HAIRCODE AEON BSD',
       subtitle: 'Villa Shinta Corner & Rafting Pangalengan',
-      location: 'Pangalengan, Bandung Selatan',
-      badge: 'Outbound Gathering',
+      location: 'Pangalengan, Bandung',
+      badge: 'Corporate Gathering',
       image: '/gallery_haircode_pangalengan.jpg'
     },
     {
@@ -52,12 +52,57 @@ export default function GallerySection({ lang }: GallerySectionProps) {
     },
     {
       id: 5,
-      category: 'destinasi',
+      category: 'religi',
       title: 'Wisata Religi Masjid Sheikh Zayed',
       subtitle: 'Kunjungan Rombongan Wisata Keagamaan Solo',
       location: 'Masjid Raya Sheikh Zayed, Surakarta',
       badge: 'Wisata Religi',
       image: '/gallery_masjid_zayed.jpg'
+    },
+    {
+      id: 6,
+      category: 'destinasi',
+      title: 'Rahayu River Tubing Kebumen',
+      subtitle: 'Petualangan Wisata Air Tubing Sungai Rahayu Kebumen',
+      location: 'Padureso, Kebumen',
+      badge: 'River Tubing',
+      image: '/gallery_rahayu_tubing.jpg'
+    },
+    {
+      id: 7,
+      category: 'religi',
+      title: 'Rihlah Musholla Al-Huda Jakarta',
+      subtitle: 'Rombongan Ziarah & Wisata Bersama Big Bus Bagong',
+      location: 'Pejaten Timur, Jakarta',
+      badge: 'Rihlah & Bus Tour',
+      image: '/gallery_rihlah_alhuda.jpg'
+    },
+    {
+      id: 8,
+      category: 'gathering',
+      title: 'Rafting Cisadane KKCPN Jakarta Utara',
+      subtitle: 'Outbound & Arung Jeram Sungai Cisadane Bogor',
+      location: 'Sungai Cisadane, Bogor',
+      badge: 'Outbound Rafting',
+      image: '/gallery_rafting_cisadane.jpg'
+    },
+    {
+      id: 9,
+      category: 'gathering',
+      title: 'Gathering SDN Lenteng Agung 01',
+      subtitle: 'Watu Angkruk Serambi Dieng Plateau',
+      location: 'Dieng Plateau, Wonosobo',
+      badge: 'School Gathering',
+      image: '/gallery_sdn_lenteng_dieng.jpg'
+    },
+    {
+      id: 10,
+      category: 'destinasi',
+      title: 'Open Trip Bromo - Semeru',
+      subtitle: 'Eksplorasi Pesona Gunung Bromo & Semeru',
+      location: 'Taman Nasional Bromo Tengger Semeru',
+      badge: 'Bromo Semeru',
+      image: '/gallery_bromo_semeru.jpg'
     }
   ];
 
@@ -107,7 +152,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
                   : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
               }`}
             >
-              Gathering &amp; School Tour
+              Gathering &amp; Outbound
             </button>
             <button
               onClick={() => setActiveFilter('destinasi')}
@@ -118,6 +163,16 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               }`}
             >
               Destinasi &amp; Offroad
+            </button>
+            <button
+              onClick={() => setActiveFilter('religi')}
+              className={`px-4 py-2 rounded-full text-xs font-display font-bold uppercase transition-all cursor-pointer ${
+                activeFilter === 'religi'
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+                  : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
+              }`}
+            >
+              Wisata Religi &amp; Rihlah
             </button>
           </div>
         </div>
@@ -131,7 +186,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.35, delay: index * 0.05 }}
+                transition={{ duration: 0.35, delay: index * 0.04 }}
                 key={item.id}
                 onClick={() => setSelectedPhoto(item.image)}
                 className="group relative rounded-3xl overflow-hidden bg-slate-950 border border-slate-800/90 shadow-md hover:shadow-2xl hover:border-blue-500/50 transition-all duration-500 cursor-pointer flex flex-col justify-end aspect-[4/3]"
