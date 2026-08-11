@@ -23,13 +23,12 @@ export default function HomePreviews({
 
   // Get specific car items for display
   const avanza = CARS.find(c => c.id === 'avanza') || CARS[0];
-  const hiace = CARS.find(c => c.id === 'hiace-premio-14') || CARS[2];
   const displayedPackages = TOUR_PACKAGES.slice(0, 6);
 
   return (
     <div className="space-y-16 py-12 bg-slate-50 border-b border-slate-200/80">
       
-      {/* 1. KATALOG ARMADA UNGGULAN (KARTU BUS DAN ELF DIPISAHKAN) */}
+      {/* 1. KATALOG ARMADA UNGGULAN (KARTU BUS, ELF, DAN HIACE DALAM BINGKAI KATEGORI MODAL POP-UP) */}
       <section id="cars-preview" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2.5">
@@ -45,11 +44,11 @@ export default function HomePreviews({
           <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Tersedia pilihan sewa Toyota Avanza/Innova, Toyota Hiace, **Bingkai Terpisah Armada Bus Pariwisata**, serta **Bingkai Terpisah Armada Isuzu Elf**.
+            Tersedia bingkai kartu khusus **Semua Bus**, **Semua Elf**, dan **Semua Hiace** yang menampilkan rincian beragam tipenya melalui pop-up modal.
           </p>
         </div>
 
-        {/* Fleet Grid: 4 Cards (Bus & Elf Dipisahkan) */}
+        {/* Fleet Grid: 4 Cards (Bus, Elf, Hiace masing-masing 1 kartu dengan Pop-Up) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
           
           {/* Card 1: Avanza & Innova MPV */}
@@ -89,44 +88,63 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 2: Toyota Hiace */}
+          {/* Card 2: KARTU KHUSUS — SEMUA TOYOTA HIACE */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.08 }}
             onClick={() => setActiveModalCategory('hiace')}
-            className="bg-white border border-slate-200/90 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left"
+            className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 border border-blue-400 rounded-3xl p-5 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden cursor-pointer text-left text-white"
           >
             <div className="space-y-3">
-              <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
-                <img src={hiace.image} alt={hiace.name} className="w-full h-auto object-contain max-h-[140px] drop-shadow-md group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-2.5 left-2.5 bg-blue-50 text-blue-700 border border-blue-200 font-display font-bold text-[10px] uppercase px-2 py-0.5 rounded-full">
-                  TOYOTA HIACE
+              <div className="relative rounded-2xl overflow-hidden bg-slate-900 aspect-[16/10] flex items-center justify-center">
+                <img src="/hiace_premio.avif" alt="Semua Toyota Hiace" className="w-full h-full object-cover opacity-90 group-hover:scale-108 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                
+                <div className="absolute top-2.5 left-2.5 bg-blue-600 text-white font-display font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full shadow-md">
+                  KARTU TOYOTA HIACE
                 </div>
-                <div className="absolute bottom-2.5 right-2.5 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1">
+
+                <div className="absolute top-2.5 right-2.5 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                   <Users className="w-3 h-3 text-blue-600" />
                   <span>10 - 14 Kursi</span>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-display font-black text-base text-slate-900 tracking-tight">Semua Toyota Hiace</h3>
-                <p className="text-[11px] text-slate-500 font-medium line-clamp-2 mt-1">Hiace Premio 14 Seat, Premio Luxury VIP, Commuter 14 Seat &amp; Luxury Seat.</p>
-              </div>
-              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
-                  <span className="font-display font-black text-sm text-blue-600">Start Rp 1.100.000</span>
+
+                <div className="absolute bottom-2 left-2.5 right-2.5 text-white">
+                  <span className="text-[10px] font-extrabold uppercase text-sky-300 block tracking-wider">
+                    4 VARIANT TIPE HIACE
+                  </span>
                 </div>
               </div>
+
+              <div>
+                <h3 className="font-display font-black text-base text-white tracking-tight uppercase group-hover:text-sky-300 transition-colors">
+                  Semua Toyota Hiace
+                </h3>
+                <p className="text-[11px] text-slate-300 font-medium line-clamp-2 mt-1">
+                  Hiace Premio 14 Seat, Premio Luxury VIP, Commuter 14 Seat &amp; Luxury Seat.
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
+                <div>
+                  <span className="text-[9px] font-bold text-slate-400 uppercase block">Tarif Sewa</span>
+                  <span className="font-display font-black text-sm text-sky-300">Start Rp 1.100.000</span>
+                </div>
+                <span className="text-[9px] font-extrabold text-sky-300 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-700/60">
+                  Detail Pop-up ➔
+                </span>
+              </div>
             </div>
+
             <div className="pt-3">
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   setActiveModalCategory('hiace');
-                }}
-                className="w-full bg-slate-900 hover:bg-blue-600 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                }} 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-display font-bold text-xs uppercase py-2.5 px-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Lihat Tipe Hiace</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -134,7 +152,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 3: DIPISAHKAN — SEMUA ISUZU ELF */}
+          {/* Card 3: KARTU KHUSUS — SEMUA ISUZU ELF */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +216,7 @@ export default function HomePreviews({
             </div>
           </motion.div>
 
-          {/* Card 4: DIPISAHKAN — SEMUA BUS PARIWISATA */}
+          {/* Card 4: KARTU KHUSUS — SEMUA BUS PARIWISATA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -387,7 +405,7 @@ export default function HomePreviews({
         </div>
       </section>
 
-      {/* POPUP MODAL (TEXT ONLY, NO IMAGES IN POPUP) FOR BUS / ELF / HIACE */}
+      {/* POPUP MODAL (STRICTLY TEXT ONLY, NO IMAGES IN POPUP) FOR BUS / ELF / HIACE */}
       <FleetTypeModal
         category={activeModalCategory}
         onClose={() => setActiveModalCategory(null)}
